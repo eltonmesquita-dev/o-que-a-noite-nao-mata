@@ -3,7 +3,11 @@
 <title>O Que A Noite Não Mata</title>
 <style>
 :root{--bg:#07070a;--panel:#121117;--line:#2a2630;--text:#ddd6cf;--muted:#8d8590;--blood:#b3121b;--blood2:#e2333c;
---laura:#e2333c;--kanaima:#7d4bd6;--harding:#d58a1f;--avo:#3fa36b;--jack:#2f86d6;--hospital:#9aa0a6}
+--laura:#e2333c;--kanaima:#7d4bd6;--harding:#d58a1f;--avo:#3fa36b;--jack:#2f86d6;--hospital:#9aa0a6;--beatrice:#e05fb0}
+.cena{font:10px system-ui;color:#f5c2e2;background:#3a1730;border-radius:3px;padding:0 4px;margin-left:3px;white-space:nowrap}.est{font:10px system-ui;color:#e3b341;border:1px solid #6b5520;border-radius:3px;padding:0 4px;margin-left:3px}
+.enc{position:absolute;right:2px;bottom:2px;font-size:11px;color:#fff;background:linear-gradient(90deg,var(--beatrice),var(--jack));border-radius:8px;padding:0 4px}
+.ev.eco{opacity:.75;outline:2px dashed #fff}.conn{position:absolute;width:0;border-left:2px dotted #fff;opacity:.7;pointer-events:none}
+.ord td{padding:.25rem .4rem}.ord .pre{opacity:.55}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a0b0e,var(--bg) 60%);color:var(--text);font:16px/1.6 Georgia,serif}
 a{color:var(--blood2)}header.hero{padding:4rem 1.5rem 2rem;text-align:center;border-bottom:1px solid var(--line)}
 h1{font-size:clamp(2.2rem,6vw,4.4rem);margin:0;letter-spacing:.04em;text-shadow:0 0 24px rgba(179,18,27,.6)}
@@ -25,7 +29,7 @@ button{cursor:pointer}button:hover{border-color:var(--blood)}
 .bar.s{border-top-left-radius:6px;border-bottom-left-radius:6px;margin-left:0}.bar.e{border-top-right-radius:6px;border-bottom-right-radius:6px;margin-right:0}
 .bar.c{color:transparent}
 .tl{overflow-x:auto}.tlin{position:relative;font:11px system-ui,sans-serif}
-.lane{position:relative;height:56px;border-bottom:1px dashed #221f27}.lane .lab{position:sticky;left:0;z-index:2;width:120px;background:var(--panel);height:100%;display:flex;align-items:center;font-weight:600}
+.lane{position:relative;border-bottom:1px dashed #221f27}.lane .lab{position:sticky;left:0;z-index:2;width:120px;background:var(--panel);height:100%;display:flex;align-items:center;font-weight:600}
 .ev{position:absolute;top:4px;height:20px;border-radius:4px;color:#fff;padding:0 4px;white-space:nowrap;overflow:visible;cursor:pointer;min-width:8px;line-height:20px;box-shadow:0 0 0 1px #000}
 .ev.alt span{top:33px}.ev span{position:absolute;left:0;top:20px;font-size:10px;line-height:13px;color:var(--text);text-shadow:0 0 3px #000}
 .axis{position:relative;height:38px;color:var(--muted)}.tick{position:absolute;top:0;border-left:1px solid #333;height:100%;padding-left:2px;font-size:10px}
@@ -212,7 +216,257 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "causa": [
    "enterro",
    "tocaia"
+  ],
+  "cenas": [
+   89
   ]
+ },
+ {
+  "id": "b_voo",
+  "ini": "05-22",
+  "fim": "05-22",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Mesmo voo: Beatrice e Estêvão chegam",
+  "texto": "Em Georgetown, Beatrice embarca no Cessna para Paramakatoi; logo depois dela entra Estêvão, que ainda não a conhece (cena 47, fim do flashback). Na pista improvisada do Vale Paramakatoi, Beatrice desce do avião e Estêvão desce atrás dela (cena 39). Os dois e outros passageiros seguem de jipe até a aldeia (cena 48).",
+  "causa": [
+   "georgetown"
+  ],
+  "cenas": [
+   47,
+   39,
+   48
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_waiking",
+  "ini": "05-22",
+  "fim": "05-22",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Beatrice é recebida por Waiking",
+  "texto": "No centro comunitário, Beatrice é recebida por Waiking, que será seu guia. Os moradores contam que ela ficou famosa: a história de que o kanaimà Piraí tentou matá-la e não conseguiu se espalhou pela região. Dizem que, se ela oferecer dinheiro, alguns kanaimà podem aparecer para ser entrevistados.",
+  "causa": [
+   "b_voo"
+  ],
+  "cenas": [
+   50
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_entrevistas",
+  "ini": "05-23",
+  "fim": "05-23",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Entrevistas na aldeia",
+  "texto": "Ao lado de Waiking, Beatrice conversa com vários moradores e coleta informações sobre os kanaimà; alguns entrevistados são evidentemente mentirosos.",
+  "causa": [
+   "b_waiking"
+  ],
+  "cenas": [
+   51
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_pedido",
+  "ini": "05-24",
+  "fim": "05-24",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "1º encontro: Estêvão pede ajuda",
+  "texto": "Por sugestão do Padre William (cena 54) e depois de achar o túmulo de Laura (cenas 55–56), Estêvão procura Beatrice no alojamento à noite e pede ajuda. Ela se recusa, os dois discutem e ele sai furioso.",
+  "causa": [
+   "b_voo",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   57
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_bispo",
+  "ini": "05-26",
+  "fim": "05-26",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice entrevista o Bispo (Estêvão vigia)",
+  "texto": "Outro dia, numa clareira perto da aldeia, Beatrice entrevista o Bispo, ladeado pelos três filhos. Estêvão, que a seguiu, vigia tudo pela câmera com zoom e depois se aproxima. O Bispo oferece o maba num vidrinho, nega ter tentado matá-la e avisa que Piraí vai tentar corrigir a humilhação de ela ter sobrevivido; diz que ela não vai mais encontrá-lo. Em seguida (cenas 60–64), Estêvão segue o Bispo até o hotel abandonado e sai gravemente ferido.",
+  "causa": [
+   "b_pedido",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   58,
+   59
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_caverna",
+  "ini": "05-30",
+  "fim": "05-30",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Tour com Waiking e a caverna",
+  "texto": "Enquanto Estêvão se recupera (alta do hospital e conversa com o Padre, cenas 65–67), Waiking leva Beatrice a lugares ligados aos kanaimà. Numa caverna, um covil supostamente abandonado, ele explica o elixir e o avatar do chefe kanaimà; restos de fogueira, uma sacola e um tacape enorme mostram que o lugar está ocupado. Os dois saem depressa.",
+  "causa": [
+   "b_bispo"
+  ],
+  "cenas": [
+   68,
+   69
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_romance",
+  "ini": "05-30",
+  "fim": "05-30",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Desculpas, uísque e a noite juntos",
+  "texto": "De volta à base, Beatrice encontra Estêvão, ainda machucado, que veio pedir desculpas com uma garrafa de uísque. Ela se preocupa com o estado dele; bebem, conversam e passam a noite juntos.",
+  "causa": [
+   "b_bispo",
+   "b_caverna"
+  ],
+  "cenas": [
+   70
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_briga",
+  "ini": "05-31",
+  "fim": "05-31",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "A briga: Beatrice expulsa Estêvão",
+  "texto": "De madrugada, Beatrice flagra Estêvão fuçando nos arquivos dela atrás de algo sobre o Bispo. Furiosa, ela o expulsa.",
+  "causa": [
+   "b_romance"
+  ],
+  "cenas": [
+   71
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_filha",
+  "ini": "05-31",
+  "fim": "05-31",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Waiking pede ajuda pela filha",
+  "texto": "No dia seguinte, Waiking pede ajuda: sua filha de 6 anos foi marcada para morrer por Piraí porque ele vinha ajudando Beatrice. Ela recusa, até ver a menina com o dedo mínimo quebrado; comovida, fica com a criança e promete tentar ajudar.",
+  "causa": [
+   "b_briga",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   72
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_ministerio",
+  "ini": "06-01",
+  "fim": "06-01",
+  "trilha": "beatrice",
+  "local": "Georgetown",
+  "titulo": "Ministry of Amerindian Affairs",
+  "texto": "Em Georgetown, Beatrice expõe a situação e ouve que o governo não pode intervir na cultura local. Discute com o ministro e sai frustrada, percebendo que o governo age com ela como ela agiu com Estêvão. (Ida estimada de avião, como na cena 47; a volta à base é a cena 74, em 2 jun.)",
+  "causa": [
+   "b_filha"
+  ],
+  "cenas": [
+   73
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_rapto",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Piraí leva a filha de Waiking",
+  "texto": "De volta à base, à noite, Beatrice encontra a porta do alojamento encostada, Waiking desmaiado e vê um kanaimà saindo pela janela com a filha de Waiking.",
+  "causa": [
+   "b_ministerio",
+   "b_filha"
+  ],
+  "cenas": [
+   74,
+   75
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_ajuda",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice pede ajuda a Estêvão",
+  "texto": "Beatrice corre até a escola da missão e pede ajuda a Estêvão, que parte com ela e Waiking para a floresta. Na mata, o Bispo (voz vinda da escuridão) e os dois filhos restantes oferecem trazer a criança em troca da vida de Estêvão; ele aceita e é amarrado e drogado. O Bispo diz que Beatrice deve deixar a Guiana para sempre.",
+  "causa": [
+   "b_rapto",
+   "b_briga"
+  ],
+  "cenas": [
+   76,
+   77,
+   78
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_morte_bispo",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice mata o Bispo na caverna",
+  "texto": "Beatrice e Waiking correm por um atalho até a caverna. Perto dela, um kanaimà mata Waiking. Banhada de sangue, Beatrice pega o tacape e esmaga a cabeça do Bispo, que dormia em transe; o kanaimà que atacava Estêvão se dissipa (cenas 81–85) e ele chega ao hospital ao amanhecer (cenas 86–87).",
+  "causa": [
+   "b_ajuda",
+   "b_caverna"
+  ],
+  "cenas": [
+   79,
+   80,
+   84
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_despedida",
+  "ini": "06-05",
+  "fim": "06-05",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Despedida no hospital",
+  "texto": "Beatrice visita Estêvão no hospital com a filha de Waiking, que irá para adoção. Os dois insinuam querer adotá-la e dão as mãos. Estêvão diz que vai esperar o corpo de Laura ser enviado ao Brasil; Beatrice conta que os kanaimà voltam ao túmulo quando o cadáver já se liquefez, para sugar o fluido cadavérico. Despedem-se prometendo um reencontro.",
+  "causa": [
+   "b_morte_bispo"
+  ],
+  "cenas": [
+   88
+  ],
+  "estimada": true,
+  "par": "jack"
  }
 ]
 </script>
@@ -232,11 +486,12 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
 
 <section><h3>Resumo</h3><div class="stats" id="stats"></div></section>
 <section><h3>Calendário — abril, maio, junho</h3><div class="months" id="cal"></div></section>
-<section><h3>Linha do tempo proporcional (1 dia = escala fixa)</h3><div class="panel tl"><div class="tlin" id="tl"></div></div></section>
+<section><h3>Linha do tempo proporcional (1 dia = escala fixa)</h3><p class="sub" style="font-size:.85rem">Na trilha Beatrice, “C57” = Cena 57 da escaleta (clique para ver o resumo). Barras bicolores = encontros Beatrice × Estêvão, repetidas na trilha de Estêvão (contorno tracejado) e ligadas por linha pontilhada.</p><div class="panel tl"><div class="tlin" id="tl"></div></div></section>
 <section><h3>Intervalos-chave</h3><div class="panel"><table id="ints"></table></div></section>
 <section><h3>A regra kanaimà (4 semanas)</h3><div class="panel" id="regra"></div></section>
 <section><h3>Verificador de consistência</h3><div class="panel"><table id="cons"></table></div></section>
 <section><h3>Cadeia causal (causa → efeito)</h3><div class="panel chain" id="chain"></div></section>
+<section><h3>Ordem da escaleta × ordem cronológica</h3><div class="panel"><p class="sub" style="font-size:.85rem">Esquerda: eventos na ordem das cenas da escaleta. Direita: posição cronológica. Setas ↺ indicam flashback/salto.</p><table class="ord" id="ordem"></table></div></section>
 <section><h3>Lista completa</h3><div class="panel"><table id="lista"></table></div></section>
 <section><h3>Observações cronológicas</h3><div class="panel obs" id="obs"><p class="sub">Observações neutras, geradas pelo cálculo das datas — não são eventos da história.</p></div></section>
 </main>
@@ -246,15 +501,16 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
 <div style="display:grid;grid-template-columns:120px 1fr;gap:.5rem;font:14px system-ui">
 <label>id</label><input id="f_id"><label>início (MM-DD)</label><input id="f_ini" placeholder="05-11"><label>fim (MM-DD)</label><input id="f_fim">
 <label>trilha</label><select id="f_trilha"></select><label>local</label><input id="f_local" list="locs"><datalist id="locs"></datalist>
-<label>título</label><input id="f_titulo"><label>texto</label><textarea id="f_texto" rows="5"></textarea><label>causas (ids, vírgula)</label><input id="f_causa"></div>
+<label>título</label><input id="f_titulo"><label>texto</label><textarea id="f_texto" rows="5"></textarea><label>cenas (nºs, vírgula)</label><input id="f_cenas"><label>causas (ids, vírgula)</label><input id="f_causa"></div>
 <p><button id="fSalvar">Salvar</button> <button id="fExcluir">Excluir</button> <button onclick="form.style.display='none'">Cancelar</button></p></div>
 <footer>O Que A Noite Não Mata · edições ficam salvas no seu navegador (localStorage)</footer>
 <script>
 const ORIG=JSON.parse(document.getElementById('dados').textContent);
-const TR={laura:['Laura','var(--laura)'],harding:['Harding / Tio Mako','var(--harding)'],kanaima:['Kanaimà (O Bispo e filhos)','var(--kanaima)'],hospital:['Hospital / enterro','var(--hospital)'],avo:['Avô','var(--avo)'],jack:['Estêvão','var(--jack)']};
+const TR0={laura:['Laura','var(--laura)'],harding:['Harding / Tio Mako','var(--harding)'],kanaima:['Kanaimà (O Bispo e filhos)','var(--kanaima)'],hospital:['Hospital / enterro','var(--hospital)'],avo:['Avô','var(--avo)'],jack:['Estêvão','var(--jack)'],beatrice:['Beatrice','var(--beatrice)']};
+const TR={};Object.keys(TR0).filter(k=>k!=='jack').forEach(k=>TR[k]=TR0[k]);TR.jack=TR0.jack;
 const LOCS=['Georgetown','Vale Paramakatoi','Paramakatoi','Brasil','Rio de Janeiro'];
 const MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'],MESL=['janeiro','fevereiro','março','abril','maio','junho'];
-let EV=JSON.parse(localStorage.getItem('oqannm_ev')||'null')||ORIG, ano=+(localStorage.getItem('oqannm_ano')||2026);
+let EV=JSON.parse(localStorage.getItem('oqannm_ev_v2')||'null')||ORIG, ano=+(localStorage.getItem('oqannm_ano')||2026);
 const offTr=new Set(),offLo=new Set();
 const $=id=>document.getElementById(id);
 const dt=s=>{const[m,d]=s.split('-').map(Number);return Date.UTC(ano,m-1,d)};
@@ -262,39 +518,48 @@ const dn=s=>Math.round((dt(s)-dt('04-14'))/864e5); // Dia N (14 abr = Dia 0)
 const fmt=s=>{const[m,d]=s.split('-').map(Number);return d+' '+MES[m-1]};
 const diff=(a,b)=>Math.round((dt(b)-dt(a))/864e5);
 const dow=s=>['dom','seg','ter','qua','qui','sex','sáb'][new Date(dt(s)).getUTCDay()];
-const vis=e=>!offTr.has(e.trilha)&&!offLo.has(e.local);
+const vis=e=>(!offTr.has(e.trilha)||(e.par&&!offTr.has(e.par)))&&!offLo.has(e.local);
+const CN=e=>(e.cenas||[]).length?`<span class="cena">Cena ${e.cenas.join(', ')}</span>`:'';
+const ES=e=>e.estimada?'<span class="est">data estimada</span>':'';
+const BG=e=>e.par?`linear-gradient(90deg,${col(e)} 50%,${TR[e.par][1]} 50%)`:col(e);
 const col=e=>(TR[e.trilha]||['','#666'])[1];
 const byId=id=>EV.find(e=>e.id===id);
-const save=()=>{localStorage.setItem('oqannm_ev',JSON.stringify(EV));$('aviso').textContent=JSON.stringify(EV)===JSON.stringify(ORIG)?'':'⚠ Você está vendo uma versão editada (salva neste navegador).';render()};
+const save=()=>{localStorage.setItem('oqannm_ev_v2',JSON.stringify(EV));$('aviso').textContent=JSON.stringify(EV)===JSON.stringify(ORIG)?'':'⚠ Você está vendo uma versão editada (salva neste navegador).';render()};
 function chips(el,list,off,lab,c){$(el).innerHTML='';list.forEach(k=>{const s=document.createElement('span');s.className='chip'+(off.has(k)?' off':'');s.textContent=lab(k);if(c)s.style.borderColor=c(k);s.onclick=()=>{off.has(k)?off.delete(k):off.add(k);render()};$(el).append(s)})}
 function det(id){const e=byId(id);const d=$('det');d.style.display='block';
- d.innerHTML=`<b style="color:${col(e)}">${e.titulo}</b> <span class="tag">${e.local}</span><br><small>${fmt(e.ini)}${e.fim!==e.ini?' – '+fmt(e.fim)+' ('+(diff(e.ini,e.fim)+1)+' dias)':''} · ${dow(e.ini)} · Dia ${dn(e.ini)} · D-${diff(e.ini,'06-08')}</small><p>${e.texto}</p>
+ d.innerHTML=`<b style="color:${col(e)}">${e.titulo}</b> <span class="tag">${e.local}</span>${CN(e)}${ES(e)}${e.par?' <span class="enc" style="position:static">encontro B×E</span>':''}<br><small>${fmt(e.ini)}${e.fim!==e.ini?' – '+fmt(e.fim)+' ('+(diff(e.ini,e.fim)+1)+' dias)':''} · ${dow(e.ini)} · Dia ${dn(e.ini)} · D-${diff(e.ini,'06-08')}</small><p>${e.texto}</p>
  <small>Causas: ${(e.causa||[]).map(c=>byId(c)?byId(c).titulo:c+' (?)').join(', ')||'—'}<br>Consequências: ${EV.filter(x=>(x.causa||[]).includes(e.id)).map(x=>x.titulo).join(', ')||'—'}</small><p class="noprint"><button onclick="edit('${e.id}')">Editar</button> <button onclick="det.style.display='none';this.closest('#det').style.display='none'">Fechar</button></p>`}
 function render(){
- const E=[...EV].sort((a,b)=>dt(a.ini)-dt(b.ini));
+ const E=[...EV].sort((a,b)=>dt(a.ini)-dt(b.ini)||((a.cenas||[0])[0]-(b.cenas||[0])[0]));
  chips('fTr',Object.keys(TR),offTr,k=>TR[k][0],k=>TR[k][1]);chips('fLo',LOCS,offLo,k=>k);
  // stats
  const j=diff('04-14','06-08');
- $('stats').innerHTML=`<div class="panel"><div class="big">${j} dias</div>de 14 abr a 8 jun (${j+1} dias contando ambos)</div><div class="panel"><div class="big">${diff('05-11','06-08')} dias</div>do enterro ao retorno = ${diff('05-11','06-08')/7} semanas</div><div class="panel"><div class="big">${diff('04-23','04-26')} dias</div>da admissão à morte</div><div class="panel"><div class="big">${EV.length}</div>eventos</div>`;
+ $('stats').innerHTML=`<div class="panel"><div class="big">${j} dias</div>de 14 abr a 8 jun (${j+1} dias contando ambos)</div><div class="panel"><div class="big">${diff('05-11','06-08')} dias</div>do enterro ao retorno = ${diff('05-11','06-08')/7} semanas</div><div class="panel"><div class="big">${diff('04-23','04-26')} dias</div>da admissão à morte</div><div class="panel"><div class="big">${EV.length}</div>eventos</div><div class="panel"><div class="big">${EV.filter(e=>e.par).length}</div>encontros Beatrice × Estêvão</div>`;
  // calendário
  let h='';for(const m of [4,5,6]){const first=new Date(Date.UTC(ano,m-1,1)).getUTCDay(),nd=new Date(Date.UTC(ano,m,0)).getUTCDate();
   h+=`<div class="panel month"><h4>${MESL[m-1]} ${ano}</h4><div class="grid">`+['dom','seg','ter','qua','qui','sex','sáb'].map(x=>`<div class="dow">${x}</div>`).join('')+'<div></div>'.repeat(first);
   for(let d=1;d<=nd;d++){const k=String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0'),t=dt(k);
    const evs=E.filter(e=>vis(e)&&dt(e.ini)<=t&&t<=dt(e.fim));const N=dn(k);
    h+=`<div class="day${evs.length?' has':''}${k==='06-08'?' d8':''}"><div class="n"><b>${d}</b><span>${N>=0&&N<=55?'D'+N:''}</span></div>`+
-   evs.map(e=>{const s=e.ini===k||new Date(t).getUTCDay()===0||d===1,en=e.fim===k;return `<span class="bar${e.ini===k?' s':''}${en?' e':''}${s?'':' c'}" style="background:${col(e)}" title="${e.titulo}" onclick="det('${e.id}')">${e.titulo}</span>`}).join('')+'</div>'}
+   evs.map(e=>{const s=e.ini===k||new Date(t).getUTCDay()===0||d===1,en=e.fim===k;return `<span class="bar${e.ini===k?' s':''}${en?' e':''}${s?'':' c'}" style="background:${BG(e)}" title="${e.titulo}${e.cenas?' · Cena '+e.cenas.join(', '):''}" onclick="det('${e.id}')">${e.titulo}</span>`}).join('')+(evs.some(e=>e.par)?`<span class="enc" style="position:absolute;top:1px;right:28px;bottom:auto" title="Encontro Beatrice × Estêvão">B×E</span>`:'')+'</div>'}
   h+='</div></div>'}$('cal').innerHTML=h;
  // timeline proporcional
- const PX=22,start=dt('04-12'),days=60,X=s=>(dt(s)-start)/864e5*PX+120;
+ const PX=26,start=dt('04-12'),days=60,X=s=>(dt(s)-start)/864e5*PX+120;
  let t=`<div class="axis" style="width:${120+days*PX}px">`;for(let i=0;i<=days;i++){const D=new Date(start+i*864e5),m=D.getUTCMonth()+1,d=D.getUTCDate(),k=String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0');
   if(d===1||i%2===0)t+=`<div class="tick${d===1?' m':''}" style="left:${120+i*PX}px">${d}${d===1||i===0?' '+MES[m-1]:''}<br>${dn(k)>=0&&dn(k)%7===0?'D'+dn(k):''}</div>`}t+='</div>';
- for(const k in TR){if(offTr.has(k))continue;t+=`<div class="lane" style="width:${120+days*PX}px"><div class="lab" style="color:${TR[k][1]}">${TR[k][0]}</div>`+
-  E.filter(e=>e.trilha===k&&vis(e)).map((e,i)=>`<div class="ev${i%2?' alt':''}" style="left:${X(e.ini)}px;width:${(diff(e.ini,e.fim)+1)*PX-2}px;background:${col(e)}" onclick="det('${e.id}')" title="${e.titulo} · ${e.local}"><span>${fmt(e.ini)} ${e.titulo}</span></div>`).join('')+'</div>'}
+ const W=120+days*PX,pos={};let top=38,lanes='';
+ for(const k in TR){if(offTr.has(k))continue;const ends=[];let html='';
+  E.filter(e=>(e.trilha===k||e.par===k)&&vis(e)).forEach(e=>{const x=X(e.ini),w=(diff(e.ini,e.fim)+1)*PX-2,lab=e.trilha==='beatrice'?`${fmt(e.ini)} · C${e.cenas[0]}`:`${fmt(e.ini)} ${e.titulo.length>26?e.titulo.slice(0,25)+'…':e.titulo}`,ext=x+Math.max(w,lab.length*5.4+4);
+   let r=ends.findIndex(v=>v<x);if(r<0){r=ends.length;ends.push(0)}ends[r]=ext;const eco=e.trilha!==k;
+   (pos[e.id]=pos[e.id]||[]).push(top+r*34+4);
+   html+=`<div class="ev${eco?' eco':''}" style="left:${x}px;top:${r*34+4}px;width:${w}px;background:${BG(e)}" onclick="det('${e.id}')" title="${e.titulo} · ${e.local}${e.cenas?' · Cena '+e.cenas.join(', '):''}${e.estimada?' · data estimada':''}"><span>${lab}</span></div>`});
+  const h=Math.max(1,ends.length)*34+8;lanes+=`<div class="lane" style="width:${W}px;height:${h}px"><div class="lab" style="color:${TR[k][1]}">${TR[k][0]}</div>${html}</div>`;top+=h+1}
+ t+=lanes;for(const id in pos)if(pos[id].length>1){const e=byId(id),a=Math.min(...pos[id]),b=Math.max(...pos[id]);t+=`<div class="conn" style="left:${X(e.ini)+4}px;top:${a+20}px;height:${b-a-20}px"></div>`}
  const B=[['04-23','04-26','3 d'],['04-27','05-10','14 d'],['05-11','06-08','28 d = 4 sem',1],['04-14','06-08','55 d (56 incl.)']];
  B.forEach(b=>{t+=`<div class="brk" style="width:${120+days*PX}px"><div class="${b[3]?'hot':''}" style="left:${X(b[0])}px;width:${(diff(b[0],b[1])+(b[1]==='05-10'?1:0))*PX}px"><b>${fmt(b[0])} → ${fmt(b[1])}: ${b[2]}</b></div></div>`});
  $('tl').innerHTML=t;
  // intervalos
- const I=[['Protesto → contratação','04-14','04-16'],['Contratação (fim) → sequestro','04-18','04-22'],['Sequestro → resgate','04-22','04-23'],['Admissão → morte','04-23','04-26'],['Corpo não reivindicado (27 abr–10 mai, inclusivo)','04-27','05-10',1],['Morte → enterro','04-26','05-11'],['Enterro → avô estranha o silêncio','05-11','05-13'],['Avô contrata Estêvão → Estêvão em Georgetown','05-17','05-20'],['Estêvão em Georgetown → início da tocaia','05-20','05-29'],['Enterro → retorno dos kanaimà','05-11','06-08'],['Protesto → confronto','04-14','06-08']];
+ const I=[['Protesto → contratação','04-14','04-16'],['Contratação (fim) → sequestro','04-18','04-22'],['Sequestro → resgate','04-22','04-23'],['Admissão → morte','04-23','04-26'],['Corpo não reivindicado (27 abr–10 mai, inclusivo)','04-27','05-10',1],['Morte → enterro','04-26','05-11'],['Enterro → avô estranha o silêncio','05-11','05-13'],['Avô contrata Estêvão → Estêvão em Georgetown','05-17','05-20'],['Estêvão em Georgetown → início da tocaia','05-20','05-29'],['Estêvão em Georgetown → mesmo voo de Beatrice (estimado)','05-20','05-22'],['1º encontro (Cena 57) → pedido de resgate (Cena 76) (estimado)','05-24','06-02'],['Morte do Bispo (Cena 84) → retorno de 8 jun (estimado)','06-02','06-08'],['Enterro → retorno dos kanaimà','05-11','06-08'],['Protesto → confronto','04-14','06-08']];
  $('ints').innerHTML='<tr><th>Intervalo</th><th>De</th><th>Até</th><th>Duração</th></tr>'+I.map(i=>{const n=diff(i[1],i[2])+(i[3]?1:0);return `<tr${i[1]==='05-11'&&i[2]==='06-08'?' style="color:var(--blood2);font-weight:bold"':''}><td>${i[0]}</td><td>${fmt(i[1])}</td><td>${fmt(i[2])}</td><td>${n} dias${n%7===0?' ('+n/7+' sem)':''}</td></tr>`}).join('');
  // regra
  const en=byId('enterro'),cf=byId('confronto');
@@ -304,19 +569,33 @@ function render(){
  const C=[];const ok=(c,m)=>C.push([c,m]);
  EV.forEach(e=>{if(dt(e.fim)<dt(e.ini))ok('err',`“${e.titulo}”: fim antes do início.`);
   (e.causa||[]).forEach(c=>{const x=byId(c);if(!x)ok('err',`“${e.titulo}”: causa “${c}” inexistente.`);else if(dt(e.ini)<dt(x.ini))ok('err',`“${e.titulo}” (${fmt(e.ini)}) acontece antes da sua causa “${x.titulo}” (${fmt(x.ini)}).`);else if(dt(e.ini)<=dt(x.fim)&&x.fim!==x.ini)ok('warn',`“${e.titulo}” começa antes do fim da causa “${x.titulo}” (${fmt(x.fim)}).`)})});
- for(const k in TR){const L=E.filter(e=>e.trilha===k);for(let i=1;i<L.length;i++)if(dt(L[i].ini)<=dt(L[i-1].fim))ok('warn',`Sobreposição na trilha ${TR[k][0]}: “${L[i-1].titulo}” e “${L[i].titulo}”.`)}
+ for(const k in TR){const L=E.filter(e=>e.trilha===k);for(let i=1;i<L.length;i++)if(dt(L[i].ini)<dt(L[i-1].fim)||(dt(L[i].ini)===dt(L[i-1].fim)&&L[i].ini!==L[i].fim&&L[i-1].ini!==L[i-1].fim))ok('warn',`Sobreposição na trilha ${TR[k][0]}: “${L[i-1].titulo}” e “${L[i].titulo}”.`)}
  const pares=[['contrato','sequestro','Georgetown → Vale Paramakatoi (kanaimà)'],['rio','georgetown','Rio de Janeiro → Georgetown (Estêvão)'],['ritual','rio','Brasil → Rio de Janeiro (avô)']];
  pares.forEach(p=>{const a=byId(p[0]),b=byId(p[1]);if(a&&b){const n=diff(a.fim,b.ini);ok(n>=1?'ok':'err',`Deslocamento ${p[2]}: ${n} dia(s) disponíveis (${fmt(a.fim)} → ${fmt(b.ini)}).`)}});
  const g=byId('georgetown'),v=byId('viagem');if(g&&v)ok('ok',`Georgetown → Paramakatoi (Estêvão): viagem dentro da janela ${fmt(v.ini)}–${fmt(v.fim)} (${diff(v.ini,v.fim)+1} dias).`);
  const b=byId('busca');if(b){const n=diff(b.ini,b.fim)+1;ok(n>=14?'ok':'warn',`Corpo não reivindicado: ${n} dias (27 abr–10 mai inclusivo); prazo “cerca de 14 dias” ${n>=14?'atendido':'não atendido'}.`)}
  const r=byId('resgate'),m=byId('morte');if(r&&m)ok(diff(r.ini,m.ini)===3?'ok':'err',`“Três dias depois da admissão”: ${fmt(r.ini)} → ${fmt(m.ini)} = ${diff(r.ini,m.ini)} dias.`);
  const total=diff('04-14','06-08');ok(total<=60?'ok':'err',`Janela total 14 abr–8 jun: ${total} dias de diferença (${total+1} dias contando ambos) — dentro de 60 dias.`);
+ // --- Beatrice × Estêvão ---
+ const BE=E.filter(e=>e.trilha==='beatrice');
+ BE.forEach(e=>{if(dt(e.fim)>=dt('06-08'))ok('err',`“${e.titulo}” não termina antes do clímax de 8 jun.`)});
+ const seq=['b_pedido','b_bispo','b_romance','b_briga','b_ajuda'].map(byId);
+ if(seq.every(Boolean)){const okSeq=seq.every((e,i)=>!i||dt(e.ini)>=dt(seq[i-1].ini));ok(okSeq?'ok':'err',`Ordem dos encontros (pedido de ajuda → entrevista do Bispo → noite juntos → briga → pedido de resgate): ${seq.map(e=>fmt(e.ini)+' [Cena '+e.cenas[0]+']').join(' → ')}.`)}
+ // deslocamentos de Beatrice entre Georgetown e o interior (Cessna, mesmo dia, cf. cena 47)
+ for(let i=1;i<BE.length;i++){const a=BE[i-1],b=BE[i],ga=a.local==='Georgetown',gb=b.local==='Georgetown';if(ga!==gb){const n=diff(a.fim,b.ini);ok(n>=1||(a.id==='b_ministerio')?'ok':'warn',`Beatrice ${a.local} → ${b.local}: ${fmt(a.fim)} → ${fmt(b.ini)} (${n} dia(s); trecho feito de Cessna, como na cena 47).`)}}
+ const gt=byId('georgetown'),bv=byId('b_voo');if(gt&&bv){const n=diff(gt.ini,bv.ini);ok(n>=2?'ok':'warn',`Estêvão em Georgetown (${fmt(gt.ini)}) → voo para o vale (${fmt(bv.ini)}): ${n} dias para as cenas 44–46 (hotel à noite, ONG de dia).`)}
+ const vg=byId('viagem');if(vg&&bv)ok(dt(bv.ini)>=dt(vg.ini)&&dt(bv.ini)<=dt(vg.fim)?'warn':'err',`Chegada ao vale (cena 39, ${fmt(bv.ini)}) cai na janela “${vg.titulo}” (${fmt(vg.ini)}–${fmt(vg.fim)}), mas a escaleta mostra a chegada de avião Cessna, não de ônibus + trilha.`);
+ const tc=byId('tocaia');if(tc){const dentro=E.filter(e=>e.par&&dt(e.ini)>=dt(tc.ini)&&dt(e.ini)<=dt(tc.fim));if(dentro.length)ok('warn',`Durante “A tocaia” (${fmt(tc.ini)}–${fmt(tc.fim)}) Estêvão também aparece em: ${dentro.map(e=>e.titulo+' ('+fmt(e.ini)+')').join('; ')}; além disso, fica internado após a cena 87. A tocaia precisa ser intermitente.`)}
+ const mb=byId('b_morte_bispo'),cf2=byId('confronto');if(mb&&cf2&&dt(mb.ini)<dt(cf2.ini)&&/Bispo/.test(cf2.texto))ok('err',`Conflito: o Bispo morre em ${fmt(mb.ini)} (Cena 84), mas o evento de 8 jun diz que “O Bispo e filhos retornam à sepultura”. Na escaleta (Cena 89) aparece só “uma forma grotesca”.`);
  if(!C.some(c=>c[0]!=='ok'))ok('ok','Nenhuma causa posterior ao efeito nem sobreposição nas trilhas.');
  $('cons').innerHTML=C.map(c=>`<tr><td class="${c[0]}">${c[0]==='ok'?'✔':c[0]==='warn'?'⚠':'✘'}</td><td>${c[1]}</td></tr>`).join('');
  // cadeia
  $('chain').innerHTML=E.filter(vis).map(e=>`<div>${(e.causa||[]).map(c=>byId(c)?`<span class="node" style="background:${col(byId(c))}" onclick="det('${c}')">${byId(c).titulo}</span>`:'').join(' + ')||'<span class="sub">(origem)</span>'} → <span class="node" style="background:${col(e)}" onclick="det('${e.id}')">${e.titulo}</span> <small class="sub">${fmt(e.ini)}${(e.causa||[]).length&&byId(e.causa[0])?' · +'+diff(byId(e.causa[0]).fim,e.ini)+' d':''}</small></div>`).join('');
  // lista
- $('lista').innerHTML='<tr><th>Data</th><th>Dia</th><th>D-</th><th>Trilha</th><th>Local</th><th>Evento</th></tr>'+E.filter(vis).map(e=>`<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${fmt(e.ini)}${e.fim!==e.ini?'–'+fmt(e.fim):''}<br><small>${dow(e.ini)}</small></td><td>${dn(e.ini)}${e.fim!==e.ini?'–'+dn(e.fim):''}</td><td>D-${diff(e.ini,'06-08')}</td><td style="color:${col(e)}">${(TR[e.trilha]||[e.trilha])[0]}</td><td><span class="tag">${e.local}</span></td><td><b>${e.titulo}</b><br>${e.texto}</td></tr>`).join('');
+ $('lista').innerHTML='<tr><th>Data</th><th>Dia</th><th>D-</th><th>Trilha</th><th>Local</th><th>Cenas</th><th>Evento</th></tr>'+E.filter(vis).map(e=>`<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${fmt(e.ini)}${e.fim!==e.ini?'–'+fmt(e.fim):''}<br><small>${dow(e.ini)}</small></td><td>${dn(e.ini)}${e.fim!==e.ini?'–'+dn(e.fim):''}</td><td>D-${diff(e.ini,'06-08')}</td><td style="color:${col(e)}">${(TR[e.trilha]||[e.trilha])[0]}</td><td><span class="tag">${e.local}</span></td><td>${CN(e)}${ES(e)}</td><td><b>${e.titulo}</b>${e.par?' <span class="enc" style="position:static">B×E</span>':''}<br>${e.texto}</td></tr>`).join('');
+ // ordem escaleta × cronologia
+ const comC=E.filter(e=>e.cenas&&e.cenas.length),chron=comC.map(e=>e.id),porCena=[...comC].sort((a,b)=>Math.min(...a.cenas)-Math.min(...b.cenas));
+ $('ordem').innerHTML='<tr class="pre"><td>Cenas 1–5</td><td colspan=3>Prólogo em São Gabriel (RS), cerca de 6–7 anos antes</td></tr><tr class="pre"><td>Cenas 6–38</td><td colspan=3>Primeira viagem de Beatrice, Londres e Cambridge — anos antes, fora da janela</td></tr><tr><th>Cenas</th><th>Evento</th><th>Data</th><th>Ordem cronológica</th></tr>'+porCena.map((e,i)=>{const c=chron.indexOf(e.id)+1,prev=i?chron.indexOf(porCena[i-1].id)+1:0;return `<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${CN(e)}</td><td style="color:${col(e)}">${e.titulo}</td><td>${fmt(e.ini)} ${ES(e)}</td><td>#${c} ${c<prev?'↺':''}</td></tr>`}).join('')+'<tr class="pre"><td>Cenas 40–46</td><td colspan=3>Flashback de Estêvão: Rio (contratação, ver “O avô contrata Estêvão”, 17 mai) e Georgetown (20–21 mai)</td></tr><tr class="pre"><td>Cenas 90–94</td><td colspan=3>Epílogo no Rio e em Londres — depois de 8 jun, sem data</td></tr>';
  // observações
  const gaps=[];for(let i=1;i<E.length;i++){const ends=Math.max(...E.slice(0,i).map(x=>dt(x.fim)));const n=Math.round((dt(E[i].ini)-ends)/864e5)-1;if(n>=2)gaps.push(`${n} dias sem eventos antes de “${E[i].titulo}” (${fmt(E[i].ini)}).`)}
  $('obs').innerHTML='<p class="sub">Observações neutras, calculadas a partir das datas — não são eventos da história.</p><ul>'+[
@@ -324,22 +603,22 @@ function render(){
  'De 14 abr a 8 jun são 55 dias de diferença (56 dias contando o primeiro e o último).',
  '11 mai + 28 dias = 8 jun: o retorno cai exatamente 4 semanas depois, no mesmo dia da semana (em qualquer ano).',
  'O avô estranha o silêncio em 13 mai, 2 dias após o enterro: ninguém da família soube da morte antes do sepultamento de indigente.',
- 'A tocaia (29 mai–7 jun) termina na véspera do retorno; Estêvão chega à região entre 21 e 28 mai, bem antes da data-limite.',
+ 'Beatrice (estimado): chega em 22 mai no mesmo voo de Estêvão (Cenas 47/39); 1º encontro em 24 mai (Cena 57); entrevista do Bispo em 26 mai (Cenas 58–59); noite juntos e briga em 30–31 mai (Cenas 70–71); rapto e pedido de resgate em 2 jun (Cenas 75–76); despedida por volta de 5 jun (Cena 88).','As Cenas 6–38 (primeira viagem de Beatrice, Londres, Cambridge) acontecem anos antes (letreiro “5 anos depois” do prólogo + meses + “mais um ano”) e ficam fora desta janela de abril–junho.','A tocaia (29 mai–7 jun) termina na véspera do retorno; Estêvão chega à região entre 21 e 28 mai, bem antes da data-limite.',
  ...gaps].map(x=>`<li>${x}</li>`).join('')+'</ul>';
 }
 // formulário
 Object.keys(TR).forEach(k=>f_trilha.add(new Option(TR[k][0],k)));LOCS.forEach(l=>locs.insertAdjacentHTML('beforeend',`<option value="${l}">`));
 let edId=null;
 function edit(id){const e=id?byId(id):{id:'novo'+Date.now(),ini:'05-01',fim:'05-01',trilha:'jack',local:'Paramakatoi',titulo:'',texto:'',causa:[]};edId=id;
- ['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>$('f_'+k).value=e[k]);f_causa.value=(e.causa||[]).join(', ');form.style.display='block';$('det').style.display='none'}
-fSalvar.onclick=()=>{const e={};['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>e[k]=$('f_'+k).value.trim());e.causa=f_causa.value.split(',').map(s=>s.trim()).filter(Boolean);
+ ['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>$('f_'+k).value=e[k]);f_causa.value=(e.causa||[]).join(', ');f_cenas.value=(e.cenas||[]).join(', ');form.style.display='block';$('det').style.display='none'}
+fSalvar.onclick=()=>{const e={};['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>e[k]=$('f_'+k).value.trim());const old=byId(edId)||{};if(old.par)e.par=old.par;e.estimada=!!old.estimada;e.cenas=f_cenas.value.split(',').map(s=>+s.trim()).filter(Boolean);e.causa=f_causa.value.split(',').map(s=>s.trim()).filter(Boolean);
  if(!/^\d\d-\d\d$/.test(e.ini)||!/^\d\d-\d\d$/.test(e.fim))return alert('Use datas no formato MM-DD');
  EV=EV.filter(x=>x.id!==edId);EV.push(e);form.style.display='none';save()};
 fExcluir.onclick=()=>{if(edId&&confirm('Excluir evento?')){EV=EV.filter(x=>x.id!==edId);form.style.display='none';save()}};
 bNovo.onclick=()=>edit(null);
 bExp.onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(EV,null,1)],{type:'application/json'}));a.download='linha-do-tempo.json';a.click()};
 imp.onchange=()=>{const f=imp.files[0];if(f)f.text().then(t=>{try{EV=JSON.parse(t);save()}catch(e){alert('JSON inválido')}})};
-bReset.onclick=()=>{if(confirm('Descartar edições e voltar ao original?')){localStorage.removeItem('oqannm_ev');EV=ORIG;save()}};
+bReset.onclick=()=>{if(confirm('Descartar edições e voltar ao original?')){localStorage.removeItem('oqannm_ev_v2');EV=ORIG;save()}};
 for(let y=2020;y<=2035;y++)ano_add(y);function ano_add(y){$('ano').add(new Option(y,y,0,y===ano))}
 $('ano').onchange=e=>{ano=+e.target.value;localStorage.setItem('oqannm_ano',ano);render()};
 save();

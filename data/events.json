@@ -1,16 +1,420 @@
 [
-{"id":"protesto","ini":"04-14","fim":"04-14","trilha":"laura","local":"Georgetown","titulo":"Protesto na TimberForce","texto":"Laura lidera protesto agressivo em frente à sede da TimberForce em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.","causa":[]},
-{"id":"contrato","ini":"04-16","fim":"04-18","trilha":"harding","local":"Georgetown","titulo":"Contratação dos kanaimà","texto":"Harding, via Tio Mako, contrata o grupo kanaimà (O Bispo e filhos) para eliminar Laura, líder da ONG eco-terrorista.","causa":["protesto"]},
-{"id":"sequestro","ini":"04-22","fim":"04-22","trilha":"kanaima","local":"Vale Paramakatoi","titulo":"Sequestro e tortura","texto":"Os kanaimà sequestram Laura numa trilha isolada do Vale Paramakatoi, torturam-na e a abandonam exposta na mesma trilha.","causa":["contrato"]},
-{"id":"resgate","ini":"04-23","fim":"04-23","trilha":"hospital","local":"Paramakatoi","titulo":"Laura é encontrada viva","texto":"Moradores locais encontram Laura ainda viva. Ela é levada a uma unidade de saúde da região de Paramakatoi (posto avançado / hospital regional de referência do interior).","causa":["sequestro"]},
-{"id":"morte","ini":"04-26","fim":"04-26","trilha":"hospital","local":"Paramakatoi","titulo":"Morte de Laura","texto":"Laura morre três dias depois da admissão, sem documentos e sem identificação. Corpo fica na morgue local como “paciente desconhecida – trauma grave”.","causa":["resgate"]},
-{"id":"busca","ini":"04-27","fim":"05-10","trilha":"hospital","local":"Paramakatoi","titulo":"Corpo não reivindicado","texto":"A unidade de saúde tenta localizar parentes sem sucesso. Após o prazo regulamentar de corpo não reivindicado (cerca de 14 dias), autoriza o enterro de indigente.","causa":["morte"]},
-{"id":"enterro","ini":"05-11","fim":"05-11","trilha":"hospital","local":"Paramakatoi","titulo":"Enterro de indigente","texto":"Enterro de indigente: o corpo de Laura é sepultado em cova rasa num cemitério improvisado / área de enterros de indigentes nos arredores de Paramakatoi, sem lápide, apenas registro numérico.","causa":["busca"]},
-{"id":"silencio","ini":"05-13","fim":"05-13","trilha":"avo","local":"Brasil","titulo":"O avô estranha o silêncio","texto":"O avô de Laura, no Brasil, estranha o silêncio da neta. Liga para um representante do grupo ambiental, que confirma o sumiço após o protesto de abril.","causa":["protesto"]},
-{"id":"ritual","ini":"05-15","fim":"05-15","trilha":"avo","local":"Brasil","titulo":"Ritual do avô","texto":"O avô realiza ritual espiritual. Descobre que a neta foi assassinada, mas a magia kanaimà embaça as circunstâncias: vê apenas sombra, dor e “homens da mata”.","causa":["silencio"]},
-{"id":"rio","ini":"05-17","fim":"05-17","trilha":"avo","local":"Rio de Janeiro","titulo":"O avô contrata Estêvão","texto":"O avô viaja ao Rio de Janeiro e contrata Estêvão “Maverick” Torres.","causa":["ritual"]},
-{"id":"georgetown","ini":"05-20","fim":"05-20","trilha":"jack","local":"Georgetown","titulo":"Estêvão chega a Georgetown","texto":"Estêvão chega a Georgetown. Começa a investigação de rua: bares, informantes, pressão em Tio Mako e no Comando do Rio. Descobre o vínculo com Harding e a operação no interior.","causa":["rio"]},
-{"id":"viagem","ini":"05-21","fim":"05-28","trilha":"jack","local":"Paramakatoi","titulo":"Estêvão vai a Paramakatoi","texto":"As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.","causa":["georgetown"]},
-{"id":"tocaia","ini":"05-29","fim":"06-07","trilha":"jack","local":"Paramakatoi","titulo":"A tocaia","texto":"Em Paramakatoi, Estêvão confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.","causa":["viagem","enterro"]},
-{"id":"confronto","ini":"06-08","fim":"06-08","trilha":"kanaima","local":"Paramakatoi","titulo":"8 jun (noite): o retorno","texto":"Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.","causa":["enterro","tocaia"]}
+ {
+  "id": "protesto",
+  "ini": "04-14",
+  "fim": "04-14",
+  "trilha": "laura",
+  "local": "Georgetown",
+  "titulo": "Protesto na TimberForce",
+  "texto": "Laura lidera protesto agressivo em frente à sede da TimberForce em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.",
+  "causa": []
+ },
+ {
+  "id": "contrato",
+  "ini": "04-16",
+  "fim": "04-18",
+  "trilha": "harding",
+  "local": "Georgetown",
+  "titulo": "Contratação dos kanaimà",
+  "texto": "Harding, via Tio Mako, contrata o grupo kanaimà (O Bispo e filhos) para eliminar Laura, líder da ONG eco-terrorista.",
+  "causa": [
+   "protesto"
+  ]
+ },
+ {
+  "id": "sequestro",
+  "ini": "04-22",
+  "fim": "04-22",
+  "trilha": "kanaima",
+  "local": "Vale Paramakatoi",
+  "titulo": "Sequestro e tortura",
+  "texto": "Os kanaimà sequestram Laura numa trilha isolada do Vale Paramakatoi, torturam-na e a abandonam exposta na mesma trilha.",
+  "causa": [
+   "contrato"
+  ]
+ },
+ {
+  "id": "resgate",
+  "ini": "04-23",
+  "fim": "04-23",
+  "trilha": "hospital",
+  "local": "Paramakatoi",
+  "titulo": "Laura é encontrada viva",
+  "texto": "Moradores locais encontram Laura ainda viva. Ela é levada a uma unidade de saúde da região de Paramakatoi (posto avançado / hospital regional de referência do interior).",
+  "causa": [
+   "sequestro"
+  ]
+ },
+ {
+  "id": "morte",
+  "ini": "04-26",
+  "fim": "04-26",
+  "trilha": "hospital",
+  "local": "Paramakatoi",
+  "titulo": "Morte de Laura",
+  "texto": "Laura morre três dias depois da admissão, sem documentos e sem identificação. Corpo fica na morgue local como “paciente desconhecida – trauma grave”.",
+  "causa": [
+   "resgate"
+  ]
+ },
+ {
+  "id": "busca",
+  "ini": "04-27",
+  "fim": "05-10",
+  "trilha": "hospital",
+  "local": "Paramakatoi",
+  "titulo": "Corpo não reivindicado",
+  "texto": "A unidade de saúde tenta localizar parentes sem sucesso. Após o prazo regulamentar de corpo não reivindicado (cerca de 14 dias), autoriza o enterro de indigente.",
+  "causa": [
+   "morte"
+  ]
+ },
+ {
+  "id": "enterro",
+  "ini": "05-11",
+  "fim": "05-11",
+  "trilha": "hospital",
+  "local": "Paramakatoi",
+  "titulo": "Enterro de indigente",
+  "texto": "Enterro de indigente: o corpo de Laura é sepultado em cova rasa num cemitério improvisado / área de enterros de indigentes nos arredores de Paramakatoi, sem lápide, apenas registro numérico.",
+  "causa": [
+   "busca"
+  ]
+ },
+ {
+  "id": "silencio",
+  "ini": "05-13",
+  "fim": "05-13",
+  "trilha": "avo",
+  "local": "Brasil",
+  "titulo": "O avô estranha o silêncio",
+  "texto": "O avô de Laura, no Brasil, estranha o silêncio da neta. Liga para um representante do grupo ambiental, que confirma o sumiço após o protesto de abril.",
+  "causa": [
+   "protesto"
+  ]
+ },
+ {
+  "id": "ritual",
+  "ini": "05-15",
+  "fim": "05-15",
+  "trilha": "avo",
+  "local": "Brasil",
+  "titulo": "Ritual do avô",
+  "texto": "O avô realiza ritual espiritual. Descobre que a neta foi assassinada, mas a magia kanaimà embaça as circunstâncias: vê apenas sombra, dor e “homens da mata”.",
+  "causa": [
+   "silencio"
+  ]
+ },
+ {
+  "id": "rio",
+  "ini": "05-17",
+  "fim": "05-17",
+  "trilha": "avo",
+  "local": "Rio de Janeiro",
+  "titulo": "O avô contrata Estêvão",
+  "texto": "O avô viaja ao Rio de Janeiro e contrata Estêvão “Maverick” Torres.",
+  "causa": [
+   "ritual"
+  ]
+ },
+ {
+  "id": "georgetown",
+  "ini": "05-20",
+  "fim": "05-20",
+  "trilha": "jack",
+  "local": "Georgetown",
+  "titulo": "Estêvão chega a Georgetown",
+  "texto": "Estêvão chega a Georgetown. Começa a investigação de rua: bares, informantes, pressão em Tio Mako e no Comando do Rio. Descobre o vínculo com Harding e a operação no interior.",
+  "causa": [
+   "rio"
+  ]
+ },
+ {
+  "id": "viagem",
+  "ini": "05-21",
+  "fim": "05-28",
+  "trilha": "jack",
+  "local": "Paramakatoi",
+  "titulo": "Estêvão vai a Paramakatoi",
+  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.",
+  "causa": [
+   "georgetown"
+  ]
+ },
+ {
+  "id": "tocaia",
+  "ini": "05-29",
+  "fim": "06-07",
+  "trilha": "jack",
+  "local": "Paramakatoi",
+  "titulo": "A tocaia",
+  "texto": "Em Paramakatoi, Estêvão confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.",
+  "causa": [
+   "viagem",
+   "enterro"
+  ]
+ },
+ {
+  "id": "confronto",
+  "ini": "06-08",
+  "fim": "06-08",
+  "trilha": "kanaima",
+  "local": "Paramakatoi",
+  "titulo": "8 jun (noite): o retorno",
+  "texto": "Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
+  "causa": [
+   "enterro",
+   "tocaia"
+  ],
+  "cenas": [
+   89
+  ]
+ },
+ {
+  "id": "b_voo",
+  "ini": "05-22",
+  "fim": "05-22",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Mesmo voo: Beatrice e Estêvão chegam",
+  "texto": "Em Georgetown, Beatrice embarca no Cessna para Paramakatoi; logo depois dela entra Estêvão, que ainda não a conhece (cena 47, fim do flashback). Na pista improvisada do Vale Paramakatoi, Beatrice desce do avião e Estêvão desce atrás dela (cena 39). Os dois e outros passageiros seguem de jipe até a aldeia (cena 48).",
+  "causa": [
+   "georgetown"
+  ],
+  "cenas": [
+   47,
+   39,
+   48
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_waiking",
+  "ini": "05-22",
+  "fim": "05-22",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Beatrice é recebida por Waiking",
+  "texto": "No centro comunitário, Beatrice é recebida por Waiking, que será seu guia. Os moradores contam que ela ficou famosa: a história de que o kanaimà Piraí tentou matá-la e não conseguiu se espalhou pela região. Dizem que, se ela oferecer dinheiro, alguns kanaimà podem aparecer para ser entrevistados.",
+  "causa": [
+   "b_voo"
+  ],
+  "cenas": [
+   50
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_entrevistas",
+  "ini": "05-23",
+  "fim": "05-23",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Entrevistas na aldeia",
+  "texto": "Ao lado de Waiking, Beatrice conversa com vários moradores e coleta informações sobre os kanaimà; alguns entrevistados são evidentemente mentirosos.",
+  "causa": [
+   "b_waiking"
+  ],
+  "cenas": [
+   51
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_pedido",
+  "ini": "05-24",
+  "fim": "05-24",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "1º encontro: Estêvão pede ajuda",
+  "texto": "Por sugestão do Padre William (cena 54) e depois de achar o túmulo de Laura (cenas 55–56), Estêvão procura Beatrice no alojamento à noite e pede ajuda. Ela se recusa, os dois discutem e ele sai furioso.",
+  "causa": [
+   "b_voo",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   57
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_bispo",
+  "ini": "05-26",
+  "fim": "05-26",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice entrevista o Bispo (Estêvão vigia)",
+  "texto": "Outro dia, numa clareira perto da aldeia, Beatrice entrevista o Bispo, ladeado pelos três filhos. Estêvão, que a seguiu, vigia tudo pela câmera com zoom e depois se aproxima. O Bispo oferece o maba num vidrinho, nega ter tentado matá-la e avisa que Piraí vai tentar corrigir a humilhação de ela ter sobrevivido; diz que ela não vai mais encontrá-lo. Em seguida (cenas 60–64), Estêvão segue o Bispo até o hotel abandonado e sai gravemente ferido.",
+  "causa": [
+   "b_pedido",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   58,
+   59
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_caverna",
+  "ini": "05-30",
+  "fim": "05-30",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Tour com Waiking e a caverna",
+  "texto": "Enquanto Estêvão se recupera (alta do hospital e conversa com o Padre, cenas 65–67), Waiking leva Beatrice a lugares ligados aos kanaimà. Numa caverna, um covil supostamente abandonado, ele explica o elixir e o avatar do chefe kanaimà; restos de fogueira, uma sacola e um tacape enorme mostram que o lugar está ocupado. Os dois saem depressa.",
+  "causa": [
+   "b_bispo"
+  ],
+  "cenas": [
+   68,
+   69
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_romance",
+  "ini": "05-30",
+  "fim": "05-30",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Desculpas, uísque e a noite juntos",
+  "texto": "De volta à base, Beatrice encontra Estêvão, ainda machucado, que veio pedir desculpas com uma garrafa de uísque. Ela se preocupa com o estado dele; bebem, conversam e passam a noite juntos.",
+  "causa": [
+   "b_bispo",
+   "b_caverna"
+  ],
+  "cenas": [
+   70
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_briga",
+  "ini": "05-31",
+  "fim": "05-31",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "A briga: Beatrice expulsa Estêvão",
+  "texto": "De madrugada, Beatrice flagra Estêvão fuçando nos arquivos dela atrás de algo sobre o Bispo. Furiosa, ela o expulsa.",
+  "causa": [
+   "b_romance"
+  ],
+  "cenas": [
+   71
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_filha",
+  "ini": "05-31",
+  "fim": "05-31",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Waiking pede ajuda pela filha",
+  "texto": "No dia seguinte, Waiking pede ajuda: sua filha de 6 anos foi marcada para morrer por Piraí porque ele vinha ajudando Beatrice. Ela recusa, até ver a menina com o dedo mínimo quebrado; comovida, fica com a criança e promete tentar ajudar.",
+  "causa": [
+   "b_briga",
+   "b_entrevistas"
+  ],
+  "cenas": [
+   72
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_ministerio",
+  "ini": "06-01",
+  "fim": "06-01",
+  "trilha": "beatrice",
+  "local": "Georgetown",
+  "titulo": "Ministry of Amerindian Affairs",
+  "texto": "Em Georgetown, Beatrice expõe a situação e ouve que o governo não pode intervir na cultura local. Discute com o ministro e sai frustrada, percebendo que o governo age com ela como ela agiu com Estêvão. (Ida estimada de avião, como na cena 47; a volta à base é a cena 74, em 2 jun.)",
+  "causa": [
+   "b_filha"
+  ],
+  "cenas": [
+   73
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_rapto",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Piraí leva a filha de Waiking",
+  "texto": "De volta à base, à noite, Beatrice encontra a porta do alojamento encostada, Waiking desmaiado e vê um kanaimà saindo pela janela com a filha de Waiking.",
+  "causa": [
+   "b_ministerio",
+   "b_filha"
+  ],
+  "cenas": [
+   74,
+   75
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_ajuda",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice pede ajuda a Estêvão",
+  "texto": "Beatrice corre até a escola da missão e pede ajuda a Estêvão, que parte com ela e Waiking para a floresta. Na mata, o Bispo (voz vinda da escuridão) e os dois filhos restantes oferecem trazer a criança em troca da vida de Estêvão; ele aceita e é amarrado e drogado. O Bispo diz que Beatrice deve deixar a Guiana para sempre.",
+  "causa": [
+   "b_rapto",
+   "b_briga"
+  ],
+  "cenas": [
+   76,
+   77,
+   78
+  ],
+  "estimada": true,
+  "par": "jack"
+ },
+ {
+  "id": "b_morte_bispo",
+  "ini": "06-02",
+  "fim": "06-02",
+  "trilha": "beatrice",
+  "local": "Vale Paramakatoi",
+  "titulo": "Beatrice mata o Bispo na caverna",
+  "texto": "Beatrice e Waiking correm por um atalho até a caverna. Perto dela, um kanaimà mata Waiking. Banhada de sangue, Beatrice pega o tacape e esmaga a cabeça do Bispo, que dormia em transe; o kanaimà que atacava Estêvão se dissipa (cenas 81–85) e ele chega ao hospital ao amanhecer (cenas 86–87).",
+  "causa": [
+   "b_ajuda",
+   "b_caverna"
+  ],
+  "cenas": [
+   79,
+   80,
+   84
+  ],
+  "estimada": true
+ },
+ {
+  "id": "b_despedida",
+  "ini": "06-05",
+  "fim": "06-05",
+  "trilha": "beatrice",
+  "local": "Paramakatoi",
+  "titulo": "Despedida no hospital",
+  "texto": "Beatrice visita Estêvão no hospital com a filha de Waiking, que irá para adoção. Os dois insinuam querer adotá-la e dão as mãos. Estêvão diz que vai esperar o corpo de Laura ser enviado ao Brasil; Beatrice conta que os kanaimà voltam ao túmulo quando o cadáver já se liquefez, para sugar o fluido cadavérico. Despedem-se prometendo um reencontro.",
+  "causa": [
+   "b_morte_bispo"
+  ],
+  "cenas": [
+   88
+  ],
+  "estimada": true,
+  "par": "jack"
+ }
 ]
