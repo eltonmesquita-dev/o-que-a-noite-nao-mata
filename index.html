@@ -158,8 +158,8 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "fim": "05-17",
   "trilha": "avo",
   "local": "Rio de Janeiro",
-  "titulo": "O avô contrata Jack",
-  "texto": "O avô viaja ao Rio de Janeiro e contrata Jack “Maverick” Torres.",
+  "titulo": "O avô contrata Estêvão",
+  "texto": "O avô viaja ao Rio de Janeiro e contrata Estêvão “Maverick” Torres.",
   "causa": [
    "ritual"
   ]
@@ -170,8 +170,8 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "fim": "05-20",
   "trilha": "jack",
   "local": "Georgetown",
-  "titulo": "Jack chega a Georgetown",
-  "texto": "Jack chega a Georgetown. Começa a investigação de rua: bares, informantes, pressão em Tio Mako e no Comando do Rio. Descobre o vínculo com Harding e a operação no interior.",
+  "titulo": "Estêvão chega a Georgetown",
+  "texto": "Estêvão chega a Georgetown. Começa a investigação de rua: bares, informantes, pressão em Tio Mako e no Comando do Rio. Descobre o vínculo com Harding e a operação no interior.",
   "causa": [
    "rio"
   ]
@@ -182,8 +182,8 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "fim": "05-28",
   "trilha": "jack",
   "local": "Paramakatoi",
-  "titulo": "Jack vai a Paramakatoi",
-  "texto": "As pistas levam Jack a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.",
+  "titulo": "Estêvão vai a Paramakatoi",
+  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.",
   "causa": [
    "georgetown"
   ]
@@ -195,7 +195,7 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "A tocaia",
-  "texto": "Em Paramakatoi, Jack confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.",
+  "texto": "Em Paramakatoi, Estêvão confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.",
   "causa": [
    "viagem",
    "enterro"
@@ -208,7 +208,7 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "trilha": "kanaima",
   "local": "Paramakatoi",
   "titulo": "8 jun (noite): o retorno",
-  "texto": "Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Jack está à espera para o confronto final.",
+  "texto": "Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
   "causa": [
    "enterro",
    "tocaia"
@@ -251,7 +251,7 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
 <footer>O Que A Noite Não Mata · edições ficam salvas no seu navegador (localStorage)</footer>
 <script>
 const ORIG=JSON.parse(document.getElementById('dados').textContent);
-const TR={laura:['Laura','var(--laura)'],harding:['Harding / Tio Mako','var(--harding)'],kanaima:['Kanaimà (O Bispo e filhos)','var(--kanaima)'],hospital:['Hospital / enterro','var(--hospital)'],avo:['Avô','var(--avo)'],jack:['Jack','var(--jack)']};
+const TR={laura:['Laura','var(--laura)'],harding:['Harding / Tio Mako','var(--harding)'],kanaima:['Kanaimà (O Bispo e filhos)','var(--kanaima)'],hospital:['Hospital / enterro','var(--hospital)'],avo:['Avô','var(--avo)'],jack:['Estêvão','var(--jack)']};
 const LOCS=['Georgetown','Vale Paramakatoi','Paramakatoi','Brasil','Rio de Janeiro'];
 const MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'],MESL=['janeiro','fevereiro','março','abril','maio','junho'];
 let EV=JSON.parse(localStorage.getItem('oqannm_ev')||'null')||ORIG, ano=+(localStorage.getItem('oqannm_ano')||2026);
@@ -294,7 +294,7 @@ function render(){
  B.forEach(b=>{t+=`<div class="brk" style="width:${120+days*PX}px"><div class="${b[3]?'hot':''}" style="left:${X(b[0])}px;width:${(diff(b[0],b[1])+(b[1]==='05-10'?1:0))*PX}px"><b>${fmt(b[0])} → ${fmt(b[1])}: ${b[2]}</b></div></div>`});
  $('tl').innerHTML=t;
  // intervalos
- const I=[['Protesto → contratação','04-14','04-16'],['Contratação (fim) → sequestro','04-18','04-22'],['Sequestro → resgate','04-22','04-23'],['Admissão → morte','04-23','04-26'],['Corpo não reivindicado (27 abr–10 mai, inclusivo)','04-27','05-10',1],['Morte → enterro','04-26','05-11'],['Enterro → avô estranha o silêncio','05-11','05-13'],['Avô contrata Jack → Jack em Georgetown','05-17','05-20'],['Jack em Georgetown → início da tocaia','05-20','05-29'],['Enterro → retorno dos kanaimà','05-11','06-08'],['Protesto → confronto','04-14','06-08']];
+ const I=[['Protesto → contratação','04-14','04-16'],['Contratação (fim) → sequestro','04-18','04-22'],['Sequestro → resgate','04-22','04-23'],['Admissão → morte','04-23','04-26'],['Corpo não reivindicado (27 abr–10 mai, inclusivo)','04-27','05-10',1],['Morte → enterro','04-26','05-11'],['Enterro → avô estranha o silêncio','05-11','05-13'],['Avô contrata Estêvão → Estêvão em Georgetown','05-17','05-20'],['Estêvão em Georgetown → início da tocaia','05-20','05-29'],['Enterro → retorno dos kanaimà','05-11','06-08'],['Protesto → confronto','04-14','06-08']];
  $('ints').innerHTML='<tr><th>Intervalo</th><th>De</th><th>Até</th><th>Duração</th></tr>'+I.map(i=>{const n=diff(i[1],i[2])+(i[3]?1:0);return `<tr${i[1]==='05-11'&&i[2]==='06-08'?' style="color:var(--blood2);font-weight:bold"':''}><td>${i[0]}</td><td>${fmt(i[1])}</td><td>${fmt(i[2])}</td><td>${n} dias${n%7===0?' ('+n/7+' sem)':''}</td></tr>`}).join('');
  // regra
  const en=byId('enterro'),cf=byId('confronto');
@@ -305,9 +305,9 @@ function render(){
  EV.forEach(e=>{if(dt(e.fim)<dt(e.ini))ok('err',`“${e.titulo}”: fim antes do início.`);
   (e.causa||[]).forEach(c=>{const x=byId(c);if(!x)ok('err',`“${e.titulo}”: causa “${c}” inexistente.`);else if(dt(e.ini)<dt(x.ini))ok('err',`“${e.titulo}” (${fmt(e.ini)}) acontece antes da sua causa “${x.titulo}” (${fmt(x.ini)}).`);else if(dt(e.ini)<=dt(x.fim)&&x.fim!==x.ini)ok('warn',`“${e.titulo}” começa antes do fim da causa “${x.titulo}” (${fmt(x.fim)}).`)})});
  for(const k in TR){const L=E.filter(e=>e.trilha===k);for(let i=1;i<L.length;i++)if(dt(L[i].ini)<=dt(L[i-1].fim))ok('warn',`Sobreposição na trilha ${TR[k][0]}: “${L[i-1].titulo}” e “${L[i].titulo}”.`)}
- const pares=[['contrato','sequestro','Georgetown → Vale Paramakatoi (kanaimà)'],['rio','georgetown','Rio de Janeiro → Georgetown (Jack)'],['ritual','rio','Brasil → Rio de Janeiro (avô)']];
+ const pares=[['contrato','sequestro','Georgetown → Vale Paramakatoi (kanaimà)'],['rio','georgetown','Rio de Janeiro → Georgetown (Estêvão)'],['ritual','rio','Brasil → Rio de Janeiro (avô)']];
  pares.forEach(p=>{const a=byId(p[0]),b=byId(p[1]);if(a&&b){const n=diff(a.fim,b.ini);ok(n>=1?'ok':'err',`Deslocamento ${p[2]}: ${n} dia(s) disponíveis (${fmt(a.fim)} → ${fmt(b.ini)}).`)}});
- const g=byId('georgetown'),v=byId('viagem');if(g&&v)ok('ok',`Georgetown → Paramakatoi (Jack): viagem dentro da janela ${fmt(v.ini)}–${fmt(v.fim)} (${diff(v.ini,v.fim)+1} dias).`);
+ const g=byId('georgetown'),v=byId('viagem');if(g&&v)ok('ok',`Georgetown → Paramakatoi (Estêvão): viagem dentro da janela ${fmt(v.ini)}–${fmt(v.fim)} (${diff(v.ini,v.fim)+1} dias).`);
  const b=byId('busca');if(b){const n=diff(b.ini,b.fim)+1;ok(n>=14?'ok':'warn',`Corpo não reivindicado: ${n} dias (27 abr–10 mai inclusivo); prazo “cerca de 14 dias” ${n>=14?'atendido':'não atendido'}.`)}
  const r=byId('resgate'),m=byId('morte');if(r&&m)ok(diff(r.ini,m.ini)===3?'ok':'err',`“Três dias depois da admissão”: ${fmt(r.ini)} → ${fmt(m.ini)} = ${diff(r.ini,m.ini)} dias.`);
  const total=diff('04-14','06-08');ok(total<=60?'ok':'err',`Janela total 14 abr–8 jun: ${total} dias de diferença (${total+1} dias contando ambos) — dentro de 60 dias.`);
@@ -324,7 +324,7 @@ function render(){
  'De 14 abr a 8 jun são 55 dias de diferença (56 dias contando o primeiro e o último).',
  '11 mai + 28 dias = 8 jun: o retorno cai exatamente 4 semanas depois, no mesmo dia da semana (em qualquer ano).',
  'O avô estranha o silêncio em 13 mai, 2 dias após o enterro: ninguém da família soube da morte antes do sepultamento de indigente.',
- 'A tocaia (29 mai–7 jun) termina na véspera do retorno; Jack chega à região entre 21 e 28 mai, bem antes da data-limite.',
+ 'A tocaia (29 mai–7 jun) termina na véspera do retorno; Estêvão chega à região entre 21 e 28 mai, bem antes da data-limite.',
  ...gaps].map(x=>`<li>${x}</li>`).join('')+'</ul>';
 }
 // formulário
