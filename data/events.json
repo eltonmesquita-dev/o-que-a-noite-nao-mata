@@ -136,7 +136,7 @@
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "Estêvão vai a Paramakatoi",
-  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi de avião Cessna (cenas 54 e 47). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da YUN SHAN TIMBER local, intermediários e moradores. No hospital do vale (cena 61, por volta de 24 mai), confirma o enterro de indigente da moça branca nos arredores.",
+  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi de avião Cessna (cenas 52 e 45). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da YUN SHAN TIMBER local, intermediários e moradores. No hospital do vale (cena 59, por volta de 24 mai), confirma o enterro de indigente da moça branca nos arredores.",
   "causa": [
    "georgetown"
   ]
@@ -148,7 +148,7 @@
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "A tocaia",
-  "texto": "Depois da alta e da despedida de Beatrice (cena 93, por volta de 1 jun), já sabendo do costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba, Estêvão monta a tocaia na área do cemitério improvisado de Paramakatoi e espera até 7 jun.",
+  "texto": "Depois da alta e da despedida de Beatrice (cena 91, por volta de 1 jun), já sabendo do costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba, Estêvão monta a tocaia na área do cemitério improvisado de Paramakatoi e espera até 7 jun.",
   "causa": [
    "viagem",
    "enterro"
@@ -168,7 +168,7 @@
    "tocaia"
   ],
   "cenas": [
-   94
+   92
   ]
  },
  {
@@ -178,14 +178,14 @@
   "trilha": "beatrice",
   "local": "Vale Paramakatoi",
   "titulo": "Mesmo voo: Beatrice e Estêvão chegam",
-  "texto": "Em Georgetown, Beatrice embarca no Cessna para Paramakatoi; logo depois dela entra Estêvão, que ainda não a conhece (cena 54, fim do flashback). Na pista improvisada do Vale Paramakatoi, Beatrice desce do avião e Estêvão desce atrás dela (cena 47). Os dois e outros passageiros seguem de jipe até a aldeia (cena 55).",
+  "texto": "Em Georgetown, Beatrice embarca no Cessna para Paramakatoi; logo depois dela entra Estêvão, que ainda não a conhece (cena 52, fim do flashback). Na pista improvisada do Vale Paramakatoi, Beatrice desce do avião e Estêvão desce atrás dela (cena 45). Os dois e outros passageiros seguem de jipe até a aldeia (cena 53).",
   "causa": [
    "georgetown"
   ],
   "cenas": [
-   54,
-   47,
-   55
+   52,
+   45,
+   53
   ],
   "estimada": true,
   "par": "jack"
@@ -202,7 +202,7 @@
    "b_voo"
   ],
   "cenas": [
-   57
+   55
   ],
   "estimada": true
  },
@@ -213,12 +213,12 @@
   "trilha": "beatrice",
   "local": "Vale Paramakatoi",
   "titulo": "Entrevistas na aldeia",
-  "texto": "Montagem dentro da cena 57: ao lado de Waiking, Beatrice conversa com vários moradores e coleta informações sobre os kanaimà; alguns entrevistados são evidentemente mentirosos.",
+  "texto": "Montagem dentro da cena 55: ao lado de Waiking, Beatrice conversa com vários moradores e coleta informações sobre os kanaimà; alguns entrevistados são evidentemente mentirosos.",
   "causa": [
    "b_waiking"
   ],
   "cenas": [
-   57
+   55
   ],
   "estimada": true
  },
@@ -229,13 +229,13 @@
   "trilha": "beatrice",
   "local": "Paramakatoi",
   "titulo": "1º encontro: Estêvão pede ajuda",
-  "texto": "Por sugestão do Padre William (cena 60) e depois de achar o túmulo de Laura (cenas 61–62, “no dia seguinte”), Estêvão procura Beatrice no alojamento à noite: apresenta-se como investigador particular, pergunta se ela falou com um homem chamado Bispo e pede informações. Ela se recusa a revelar qualquer coisa (antropólogos não devem interferir); os dois discutem sobre cultura, justiça e mal. Ele espalha as folhas do diário dela, joga o diário no colo dela e sai batendo a porta.",
+  "texto": "Por sugestão do Padre William (cena 58) e depois de achar o túmulo de Laura (cenas 59–60, “no dia seguinte”), Estêvão procura Beatrice no alojamento à noite: apresenta-se como investigador particular, pergunta se ela falou com um homem chamado Bispo e pede informações. Ela se recusa a revelar qualquer coisa (antropólogos não devem interferir); os dois discutem sobre cultura, justiça e mal. Ele espalha as folhas do diário dela, joga o diário no colo dela e sai batendo a porta.",
   "causa": [
    "b_voo",
    "b_entrevistas"
   ],
   "cenas": [
-   63
+   61
   ],
   "estimada": true,
   "par": "jack"
@@ -247,14 +247,14 @@
   "trilha": "beatrice",
   "local": "Vale Paramakatoi",
   "titulo": "Beatrice entrevista o Bispo (Estêvão vigia)",
-  "texto": "Outro dia, numa clareira perto da aldeia, Beatrice entrevista o Bispo, ladeado pelos três filhos. Estêvão, que a seguiu, vigia tudo pela câmera com zoom e depois se aproxima. O Bispo oferece o maba num vidrinho, nega ter tentado matá-la e avisa que Piraí vai tentar corrigir a humilhação de ela ter sobrevivido; diz que ela não vai mais encontrá-lo. Em seguida (cenas 66–70), Estêvão segue o Bispo até o hotel abandonado e volta à missão ferido na mesma noite; o Padre troca suas bandagens (cenas 71–72).",
+  "texto": "Outro dia, numa clareira perto da aldeia, Beatrice entrevista o Bispo, ladeado pelos três filhos. Estêvão, que a seguiu, vigia tudo pela câmera com zoom e depois se aproxima. O Bispo oferece o maba num vidrinho, nega ter tentado matá-la e avisa que Piraí vai tentar corrigir a humilhação de ela ter sobrevivido; diz que ela não vai mais encontrá-lo. Em seguida (cenas 64–68), Estêvão segue o Bispo até o hotel abandonado e volta à missão ferido na mesma noite; o Padre troca suas bandagens (cenas 69–70).",
   "causa": [
    "b_pedido",
    "b_entrevistas"
   ],
   "cenas": [
-   64,
-   65
+   62,
+   63
   ],
   "estimada": true,
   "par": "jack"
@@ -266,13 +266,13 @@
   "trilha": "beatrice",
   "local": "Vale Paramakatoi",
   "titulo": "Tour com Waiking e a caverna",
-  "texto": "“No dia seguinte” à conversa noturna de Estêvão com o Padre (cenas 71–72), Waiking leva Beatrice a lugares ligados aos kanaimà. Numa caverna, um covil supostamente abandonado, ele explica o elixir e o avatar do chefe kanaimà; restos de fogueira, uma sacola e um tacape enorme mostram que o lugar está ocupado. Os dois saem depressa.",
+  "texto": "“No dia seguinte” à conversa noturna de Estêvão com o Padre (cenas 69–70), Waiking leva Beatrice a lugares ligados aos kanaimà. Numa caverna, um covil supostamente abandonado, ele explica o elixir e o avatar do chefe kanaimà; restos de fogueira, uma sacola e um tacape enorme mostram que o lugar está ocupado. Os dois saem depressa.",
   "causa": [
    "b_bispo"
   ],
   "cenas": [
-   73,
-   74
+   71,
+   72
   ],
   "estimada": true
  },
@@ -289,7 +289,7 @@
    "b_caverna"
   ],
   "cenas": [
-   75
+   73
   ],
   "estimada": true,
   "par": "jack"
@@ -306,7 +306,7 @@
    "b_romance"
   ],
   "cenas": [
-   76
+   74
   ],
   "estimada": true,
   "par": "jack"
@@ -324,7 +324,7 @@
    "b_entrevistas"
   ],
   "cenas": [
-   77
+   75
   ],
   "estimada": true
  },
@@ -335,12 +335,12 @@
   "trilha": "beatrice",
   "local": "Georgetown",
   "titulo": "Ministry of Amerindian Affairs",
-  "texto": "Em Georgetown, Beatrice expõe a situação e ouve que o governo não pode intervir na cultura local. Discute com o ministro e sai frustrada, percebendo que o governo age com ela como ela agiu com Estêvão. (O roteiro não diz como ela viaja; estimado ida e volta de Cessna no mesmo dia, como na cena 54 — ela volta à base à noite, cena 79.)",
+  "texto": "Em Georgetown, Beatrice expõe a situação e ouve que o governo não pode intervir na cultura local. Discute com o ministro e sai frustrada, percebendo que o governo age com ela como ela agiu com Estêvão. (O roteiro não diz como ela viaja; estimado ida e volta de Cessna no mesmo dia, como na cena 52 — ela volta à base à noite, cena 77.)",
   "causa": [
    "b_filha"
   ],
   "cenas": [
-   78
+   76
   ],
   "estimada": true
  },
@@ -357,8 +357,8 @@
    "b_filha"
   ],
   "cenas": [
-   79,
-   80
+   77,
+   78
   ],
   "estimada": true
  },
@@ -375,9 +375,9 @@
    "b_briga"
   ],
   "cenas": [
-   81,
-   82,
-   83
+   79,
+   80,
+   81
   ],
   "estimada": true,
   "par": "jack"
@@ -389,15 +389,15 @@
   "trilha": "beatrice",
   "local": "Vale Paramakatoi",
   "titulo": "Beatrice mata o Bispo na caverna",
-  "texto": "Beatrice e Waiking correm por um atalho até a caverna. Perto dela, um kanaimà mata Waiking. Banhada de sangue, Beatrice pega o tacape e esmaga a cabeça do Bispo, que dormia em transe; o kanaimà que atacava Estêvão se dissipa (cenas 86–90) e ele chega ao hospital ao amanhecer (cenas 91–92).",
+  "texto": "Beatrice e Waiking correm por um atalho até a caverna. Perto dela, um kanaimà mata Waiking. Banhada de sangue, Beatrice pega o tacape e esmaga a cabeça do Bispo, que dormia em transe; o kanaimà que atacava Estêvão se dissipa (cenas 84–88) e ele chega ao hospital ao amanhecer (cenas 89–90).",
   "causa": [
    "b_ajuda",
    "b_caverna"
   ],
   "cenas": [
-   84,
-   85,
-   89
+   82,
+   83,
+   87
   ],
   "estimada": true
  },
@@ -413,7 +413,7 @@
    "b_morte_bispo"
   ],
   "cenas": [
-   93
+   91
   ],
   "estimada": true,
   "par": "jack"
