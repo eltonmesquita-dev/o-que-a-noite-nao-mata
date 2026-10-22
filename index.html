@@ -56,8 +56,8 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "fim": "04-14",
   "trilha": "laura",
   "local": "Georgetown",
-  "titulo": "Protesto na TimberForce",
-  "texto": "Laura lidera protesto agressivo em frente à sede da TimberForce em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.",
+  "titulo": "Protesto na YUN SHAN TIMBER",
+  "texto": "Laura lidera protesto agressivo em frente à sede da YUN SHAN TIMBER em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.",
   "causa": []
  },
  {
@@ -187,23 +187,24 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "Estêvão vai a Paramakatoi",
-  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.",
+  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi de avião Cessna (cenas 54 e 47). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da YUN SHAN TIMBER local, intermediários e moradores. No hospital do vale (cena 61, por volta de 24 mai), confirma o enterro de indigente da moça branca nos arredores.",
   "causa": [
    "georgetown"
   ]
  },
  {
   "id": "tocaia",
-  "ini": "05-29",
+  "ini": "06-02",
   "fim": "06-07",
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "A tocaia",
-  "texto": "Em Paramakatoi, Estêvão confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.",
+  "texto": "Depois da alta e da despedida de Beatrice (cena 93, por volta de 1 jun), já sabendo do costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba, Estêvão monta a tocaia na área do cemitério improvisado de Paramakatoi e espera até 7 jun.",
   "causa": [
    "viagem",
    "enterro"
-  ]
+  ],
+  "estimada": true
  },
  {
   "id": "confronto",
@@ -212,7 +213,7 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "trilha": "kanaima",
   "local": "Paramakatoi",
   "titulo": "8 jun (noite): o retorno",
-  "texto": "Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
+  "texto": "Quatro semanas exatas após o enterro de 11 de maio: o filho restante do Bispo retorna à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
   "causa": [
    "enterro",
    "tocaia"
@@ -584,9 +585,9 @@ function render(){
  // deslocamentos de Beatrice entre Georgetown e o interior (Cessna, mesmo dia, cf. cena 54)
  for(let i=1;i<BE.length;i++){const a=BE[i-1],b=BE[i],ga=a.local==='Georgetown',gb=b.local==='Georgetown';if(ga!==gb){const n=diff(a.fim,b.ini);ok(n>=1||(a.id==='b_ministerio')?'ok':'warn',`Beatrice ${a.local} → ${b.local}: ${fmt(a.fim)} → ${fmt(b.ini)} (${n} dia(s); trecho feito de Cessna, como na cena 54; de jipe seriam ~4 dias, cf. montagem da 1ª viagem).`)}}
  const gt=byId('georgetown'),bv=byId('b_voo');if(gt&&bv){const n=diff(gt.ini,bv.ini);ok(n>=2?'ok':'warn',`Estêvão em Georgetown (${fmt(gt.ini)}) → voo para o vale (${fmt(bv.ini)}): ${n} dias para as cenas 44–46 (hotel à noite, ONG de dia).`)}
- const vg=byId('viagem');if(vg&&bv)ok(dt(bv.ini)>=dt(vg.ini)&&dt(bv.ini)<=dt(vg.fim)?'warn':'err',`Chegada ao vale (cena 47, ${fmt(bv.ini)}) cai na janela “${vg.titulo}” (${fmt(vg.ini)}–${fmt(vg.fim)}), mas o roteiro (cenas 54 e 47) mostra a chegada de avião Cessna, não de ônibus + trilha.`);
+ const vg=byId('viagem'),tq=byId('tocaia'),dp=byId('b_despedida');if(tq&&dp)ok(dt(tq.ini)>dt(dp.ini)?'ok':'err',`A tocaia (${fmt(tq.ini)}–${fmt(tq.fim)}) começa depois da alta/despedida (${fmt(dp.ini)}, Cena 93).`);
  const tc=byId('tocaia');if(tc){const dentro=E.filter(e=>e.par&&dt(e.ini)>=dt(tc.ini)&&dt(e.ini)<=dt(tc.fim));if(dentro.length)ok('warn',`Durante “A tocaia” (${fmt(tc.ini)}–${fmt(tc.fim)}) Estêvão também aparece em: ${dentro.map(e=>e.titulo+' ('+fmt(e.ini)+')').join('; ')}; além disso, fica internado após a cena 92. A tocaia precisa ser intermitente.`)}
- const mb=byId('b_morte_bispo'),cf2=byId('confronto');if(mb&&cf2&&dt(mb.ini)<dt(cf2.ini)&&/Bispo/.test(cf2.texto))ok('err',`Conflito: o Bispo morre em ${fmt(mb.ini)} (Cena 89), mas o evento de 8 jun diz que “O Bispo e filhos retornam à sepultura”. No roteiro (Cena 94) aparece só “uma forma grotesca”.`);
+ const mb=byId('b_morte_bispo'),cf2=byId('confronto');if(mb&&cf2&&dt(mb.ini)<dt(cf2.ini)&&/O Bispo e filhos/.test(cf2.texto))ok('err',`Conflito: o Bispo morre em ${fmt(mb.ini)} (Cena 89), mas o evento de 8 jun diz que “O Bispo e filhos retornam à sepultura”. No roteiro (Cena 94) aparece só “uma forma grotesca”.`);
  if(!C.some(c=>c[0]!=='ok'))ok('ok','Nenhuma causa posterior ao efeito nem sobreposição nas trilhas.');
  $('cons').innerHTML=C.map(c=>`<tr><td class="${c[0]}">${c[0]==='ok'?'✔':c[0]==='warn'?'⚠':'✘'}</td><td>${c[1]}</td></tr>`).join('');
  // cadeia
@@ -603,7 +604,7 @@ function render(){
  'De 14 abr a 8 jun são 55 dias de diferença (56 dias contando o primeiro e o último).',
  '11 mai + 28 dias = 8 jun: o retorno cai exatamente 4 semanas depois, no mesmo dia da semana (em qualquer ano).',
  'O avô estranha o silêncio em 13 mai, 2 dias após o enterro: ninguém da família soube da morte antes do sepultamento de indigente.',
- 'Beatrice (estimado): chega em 22 mai no mesmo voo de Estêvão (Cenas 54/47); 1º encontro em 24 mai (Cena 63); entrevista do Bispo em 26 mai (Cenas 64–65); noite juntos e briga em 27–28 mai (Cenas 75–76); rapto e pedido de resgate em 29 mai à noite (Cenas 80–81); despedida por volta de 1 jun (Cena 93).','As Cenas 8–46 (primeira viagem de Beatrice, Londres, Cambridge) acontecem anos antes (letreiro “5 anos depois” do prólogo + meses + “mais um ano”) e ficam fora desta janela de abril–junho.','A tocaia (29 mai–7 jun) termina na véspera do retorno; Estêvão chega à região entre 21 e 28 mai, bem antes da data-limite.',
+ 'Beatrice (estimado): chega em 22 mai no mesmo voo de Estêvão (Cenas 54/47); 1º encontro em 24 mai (Cena 63); entrevista do Bispo em 26 mai (Cenas 64–65); noite juntos e briga em 27–28 mai (Cenas 75–76); rapto e pedido de resgate em 29 mai à noite (Cenas 80–81); despedida por volta de 1 jun (Cena 93).','As Cenas 8–46 (primeira viagem de Beatrice, Londres, Cambridge) acontecem anos antes (letreiro “5 anos depois” do prólogo + meses + “mais um ano”) e ficam fora desta janela de abril–junho.','A tocaia (2–7 jun, depois da alta na Cena 93) termina na véspera do retorno; Estêvão chega ao vale de Cessna em 22 mai (Cenas 54/47), bem antes da data-limite.',
  ...gaps].map(x=>`<li>${x}</li>`).join('')+'</ul>';
 }
 // formulário

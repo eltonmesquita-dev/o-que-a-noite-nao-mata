@@ -5,8 +5,8 @@
   "fim": "04-14",
   "trilha": "laura",
   "local": "Georgetown",
-  "titulo": "Protesto na TimberForce",
-  "texto": "Laura lidera protesto agressivo em frente à sede da TimberForce em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.",
+  "titulo": "Protesto na YUN SHAN TIMBER",
+  "texto": "Laura lidera protesto agressivo em frente à sede da YUN SHAN TIMBER em Georgetown. Bloqueia caminhões e grava ameaças de novas sabotagens no Vale Paramakatoi. O gerente Dionne Harding coloca informalmente a cabeça dela a prêmio.",
   "causa": []
  },
  {
@@ -136,23 +136,24 @@
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "Estêvão vai a Paramakatoi",
-  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi (ônibus + trechos de trilha / transporte local). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da TimberForce local, intermediários e moradores.",
+  "texto": "As pistas levam Estêvão a sair de Georgetown. Ele viaja para Paramakatoi de avião Cessna (cenas 54 e 47). Chega à região da madeireira que sofreu o atentado, local do sequestro e da trilha onde Laura foi abandonada. Continua a investigação no terreno: conversa com trabalhadores da YUN SHAN TIMBER local, intermediários e moradores. No hospital do vale (cena 61, por volta de 24 mai), confirma o enterro de indigente da moça branca nos arredores.",
   "causa": [
    "georgetown"
   ]
  },
  {
   "id": "tocaia",
-  "ini": "05-29",
+  "ini": "06-02",
   "fim": "06-07",
   "trilha": "jack",
   "local": "Paramakatoi",
   "titulo": "A tocaia",
-  "texto": "Em Paramakatoi, Estêvão confirma o local do enterro de indigente nos arredores e o costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba. Monta a tocaia na área do cemitério improvisado.",
+  "texto": "Depois da alta e da despedida de Beatrice (cena 93, por volta de 1 jun), já sabendo do costume dos kanaimà de retornar à sepultura exatamente 4 semanas depois do enterro para sugar o maba, Estêvão monta a tocaia na área do cemitério improvisado de Paramakatoi e espera até 7 jun.",
   "causa": [
    "viagem",
    "enterro"
-  ]
+  ],
+  "estimada": true
  },
  {
   "id": "confronto",
@@ -161,7 +162,7 @@
   "trilha": "kanaima",
   "local": "Paramakatoi",
   "titulo": "8 jun (noite): o retorno",
-  "texto": "Quatro semanas exatas após o enterro de 11 de maio: O Bispo e filhos retornam à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
+  "texto": "Quatro semanas exatas após o enterro de 11 de maio: o filho restante do Bispo retorna à sepultura de Laura em Paramakatoi. Estêvão está à espera para o confronto final.",
   "causa": [
    "enterro",
    "tocaia"
