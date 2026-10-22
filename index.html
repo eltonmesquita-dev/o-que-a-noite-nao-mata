@@ -170,7 +170,8 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
   "par": "jack",
   "cenas": [
    49
-  ]
+  ],
+  "titulo_par": "Estêvão encontra o avô (Cena 49)"
  },
  {
   "id": "georgetown",
@@ -475,7 +476,7 @@ footer{color:var(--muted);text-align:center;padding:2rem;font-size:.85rem}
  }
 ]
 </script>
-<header class="hero"><h1>O Que A Noite Não Mata</h1><div class="sub">um longa de horror · roteiro original</div>
+<div id="aviso" style="display:none;background:#3a2a10;color:#f3d27a;padding:8px 14px;font-size:.9rem"></div><header class="hero"><h1>O Que A Noite Não Mata</h1><div class="sub">um longa de horror · roteiro original</div>
 <nav><a class="off">Parte I</a><a class="off">Parte II</a><a class="off">Parte III</a><a class="off">Parte IV</a><a class="on" href="#linha">Parte V — Linha do tempo</a></nav>
 <p class="sub" style="font-size:.85rem">Partes I a IV: em breve.</p></header>
 <main id="linha">
@@ -515,7 +516,10 @@ const TR0={laura:['Laura','var(--laura)'],harding:['Harding / Tio Mako','var(--h
 const TR={};Object.keys(TR0).filter(k=>k!=='jack').forEach(k=>TR[k]=TR0[k]);TR.jack=TR0.jack;
 const LOCS=['Georgetown','Vale Paramakatoi','Paramakatoi','Brasil','Alto da Boa Vista, Rio de Janeiro','Rio de Janeiro'];
 const MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'],MESL=['janeiro','fevereiro','março','abril','maio','junho'];
-let EV=JSON.parse(localStorage.getItem('oqannm_ev_v2')||'null')||ORIG, ano=+(localStorage.getItem('oqannm_ano')||2026);
+const DV=(s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return 'd'+(h>>>0).toString(36)})(JSON.stringify(ORIG));
+let AVISO=null;const EV0=(()=>{try{const s=JSON.parse(localStorage.getItem('oqannm_ev_v3')||'null');if(s&&s.ver===DV)return s.ev;
+ const velho=s?s.ev:JSON.parse(localStorage.getItem('oqannm_ev_v2')||'null');if(velho){localStorage.setItem('oqannm_ev_antigo',JSON.stringify(velho));localStorage.removeItem('oqannm_ev_v2');localStorage.removeItem('oqannm_ev_v3');AVISO=velho.length}}catch(x){}return null})();
+let EV=EV0||ORIG, ano=+(localStorage.getItem('oqannm_ano')||2026);
 const offTr=new Set(),offLo=new Set();
 const $=id=>document.getElementById(id);
 const dt=s=>{const[m,d]=s.split('-').map(Number);return Date.UTC(ano,m-1,d)};
@@ -527,10 +531,11 @@ const vis=e=>(!offTr.has(e.trilha)||(e.par&&!offTr.has(e.par)))&&!offLo.has(e.lo
 const CN=e=>(e.cenas||[]).length?`<span class="cena">Cena ${e.cenas.join(', ')}</span>`:'';
 const ES=e=>e.estimada?'<span class="est">data estimada</span>':'';
 const ENC=e=>e.trilha==='avo'?'A×E':'B×E',ENCT=e=>e.trilha==='avo'?'Encontro Avô × Estêvão':'Encontro Beatrice × Estêvão';
+const LANES=e=>e.par?[e.trilha,e.par]:[e.trilha],LT=(e,L)=>L===e.par&&e.titulo_par?e.titulo_par:e.titulo;
 const BG=e=>e.par?`linear-gradient(90deg,${col(e)} 50%,${TR[e.par][1]} 50%)`:col(e);
 const col=e=>(TR[e.trilha]||['','#666'])[1];
 const byId=id=>EV.find(e=>e.id===id);
-const save=()=>{localStorage.setItem('oqannm_ev_v2',JSON.stringify(EV));$('aviso').textContent=JSON.stringify(EV)===JSON.stringify(ORIG)?'':'⚠ Você está vendo uma versão editada (salva neste navegador).';render()};
+const save=()=>{localStorage.setItem('oqannm_ev_v3',JSON.stringify({ver:DV,ev:EV}));$('aviso').textContent=JSON.stringify(EV)===JSON.stringify(ORIG)?'':'⚠ Você está vendo uma versão editada (salva neste navegador).';render()};
 function chips(el,list,off,lab,c){$(el).innerHTML='';list.forEach(k=>{const s=document.createElement('span');s.className='chip'+(off.has(k)?' off':'');s.textContent=lab(k);if(c)s.style.borderColor=c(k);s.onclick=()=>{off.has(k)?off.delete(k):off.add(k);render()};$(el).append(s)})}
 function det(id){const e=byId(id);const d=$('det');d.style.display='block';
  d.innerHTML=`<b style="color:${col(e)}">${e.titulo}</b> <span class="tag">${e.local}</span>${CN(e)}${ES(e)}${e.par?' <span class="enc" style="position:static">encontro '+ENC(e)+'</span>':''}<br><small>${fmt(e.ini)}${e.fim!==e.ini?' – '+fmt(e.fim)+' ('+(diff(e.ini,e.fim)+1)+' dias)':''} · ${dow(e.ini)} · Dia ${dn(e.ini)} · D-${diff(e.ini,'06-08')}</small><p>${e.texto}</p>
@@ -547,7 +552,7 @@ function render(){
   for(let d=1;d<=nd;d++){const k=String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0'),t=dt(k);
    const evs=E.filter(e=>vis(e)&&dt(e.ini)<=t&&t<=dt(e.fim));const N=dn(k);
    h+=`<div class="day${evs.length?' has':''}${k==='06-08'?' d8':''}"><div class="n"><b>${d}</b><span>${N>=0&&N<=55?'D'+N:''}</span></div>`+
-   evs.map(e=>{const s=e.ini===k||new Date(t).getUTCDay()===0||d===1,en=e.fim===k;return `<span class="bar${e.ini===k?' s':''}${en?' e':''}${s?'':' c'}" style="background:${BG(e)}" title="${e.titulo}${e.cenas?' · Cena '+e.cenas.join(', '):''}" onclick="det('${e.id}')">${e.titulo}</span>`}).join('')+(evs.some(e=>e.par)?(p=>`<span class="enc" style="position:absolute;top:1px;right:28px;bottom:auto" title="${ENCT(p)}">${ENC(p)}</span>`)(evs.find(e=>e.par)):'')+'</div>'}
+   evs.flatMap(e=>LANES(e).filter(L=>!offTr.has(L)).map(L=>{const s=e.ini===k||new Date(t).getUTCDay()===0||d===1,en=e.fim===k,tt=LT(e,L);return `<span class="bar${e.ini===k?' s':''}${en?' e':''}${s?'':' c'}" data-lane="${L}" style="background:${TR[L][1]}" title="${TR[L][0]}: ${tt}${e.cenas?' · Cena '+e.cenas.join(', '):''}" onclick="det('${e.id}')">${tt}</span>`})).join('')+(evs.some(e=>e.par)?(p=>`<span class="enc" style="position:absolute;top:1px;right:28px;bottom:auto" title="${ENCT(p)}">${ENC(p)}</span>`)(evs.find(e=>e.par)):'')+'</div>'}
   h+='</div></div>'}$('cal').innerHTML=h;
  // timeline proporcional
  const PX=26,start=dt('04-12'),days=60,X=s=>(dt(s)-start)/864e5*PX+120;
@@ -598,7 +603,7 @@ function render(){
  // cadeia
  $('chain').innerHTML=E.filter(vis).map(e=>`<div>${(e.causa||[]).map(c=>byId(c)?`<span class="node" style="background:${col(byId(c))}" onclick="det('${c}')">${byId(c).titulo}</span>`:'').join(' + ')||'<span class="sub">(origem)</span>'} → <span class="node" style="background:${col(e)}" onclick="det('${e.id}')">${e.titulo}</span> <small class="sub">${fmt(e.ini)}${(e.causa||[]).length&&byId(e.causa[0])?' · +'+diff(byId(e.causa[0]).fim,e.ini)+' d':''}</small></div>`).join('');
  // lista
- $('lista').innerHTML='<tr><th>Data</th><th>Dia</th><th>D-</th><th>Trilha</th><th>Local</th><th>Cenas</th><th>Evento</th></tr>'+E.filter(vis).map(e=>`<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${fmt(e.ini)}${e.fim!==e.ini?'–'+fmt(e.fim):''}<br><small>${dow(e.ini)}</small></td><td>${dn(e.ini)}${e.fim!==e.ini?'–'+dn(e.fim):''}</td><td>D-${diff(e.ini,'06-08')}</td><td style="color:${col(e)}">${(TR[e.trilha]||[e.trilha])[0]}</td><td><span class="tag">${e.local}</span></td><td>${CN(e)}${ES(e)}</td><td><b>${e.titulo}</b>${e.par?' <span class="enc" style="position:static">'+ENC(e)+'</span>':''}<br>${e.texto}</td></tr>`).join('');
+ $('lista').innerHTML='<tr><th>Data</th><th>Dia</th><th>D-</th><th>Trilha</th><th>Local</th><th>Cenas</th><th>Evento</th></tr>'+E.filter(vis).map(e=>`<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${fmt(e.ini)}${e.fim!==e.ini?'–'+fmt(e.fim):''}<br><small>${dow(e.ini)}</small></td><td>${dn(e.ini)}${e.fim!==e.ini?'–'+dn(e.fim):''}</td><td>D-${diff(e.ini,'06-08')}</td><td>${LANES(e).map(L=>`<span style="color:${(TR[L]||['','#999'])[1]}">${(TR[L]||[L])[0]}</span>`).join(' + ')}</td><td><span class="tag">${e.local}</span></td><td>${CN(e)}${ES(e)}</td><td><b>${e.titulo}</b>${e.par?' <span class="enc" style="position:static">'+ENC(e)+'</span>':''}<br>${e.texto}</td></tr>`).join('');
  // ordem roteiro × cronologia
  const comC=E.filter(e=>e.cenas&&e.cenas.length),chron=comC.map(e=>e.id),porCena=[...comC].sort((a,b)=>Math.min(...a.cenas)-Math.min(...b.cenas));
  $('ordem').innerHTML='<tr class="pre"><td>Cenas 1–5</td><td colspan=3>Prólogo em São Gabriel - RS, cerca de 6–7 anos antes</td></tr><tr class="pre"><td>Cenas 6–44</td><td colspan=3>Primeira viagem de Beatrice, Londres e Cambridge — anos antes, fora da janela</td></tr><tr><th>Cenas</th><th>Evento</th><th>Data</th><th>Ordem cronológica</th></tr>'+porCena.map((e,i)=>{const c=chron.indexOf(e.id)+1,prev=i?chron.indexOf(porCena[i-1].id)+1:0;return `<tr onclick="det('${e.id}')" style="cursor:pointer"><td>${CN(e)}</td><td style="color:${col(e)}">${e.titulo}</td><td>${fmt(e.ini)} ${ES(e)}</td><td>#${c} ${c<prev?'↺':''}</td></tr>`}).join('')+'<tr class="pre"><td>Cenas 46–51</td><td colspan=3>Flashback de Estêvão: Rio (Cenas 46–49; contratação na mansão do Alto da Boa Vista, Cena 49, 17 mai) e Georgetown (20–21 mai)</td></tr><tr class="pre"><td>Cenas 93–97</td><td colspan=3>Epílogo no Rio e em Londres — depois de 8 jun, sem data</td></tr>';
@@ -617,15 +622,16 @@ Object.keys(TR).forEach(k=>f_trilha.add(new Option(TR[k][0],k)));LOCS.forEach(l=
 let edId=null;
 function edit(id){const e=id?byId(id):{id:'novo'+Date.now(),ini:'05-01',fim:'05-01',trilha:'jack',local:'Paramakatoi',titulo:'',texto:'',causa:[]};edId=id;
  ['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>$('f_'+k).value=e[k]);f_causa.value=(e.causa||[]).join(', ');f_cenas.value=(e.cenas||[]).join(', ');form.style.display='block';$('det').style.display='none'}
-fSalvar.onclick=()=>{const e={};['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>e[k]=$('f_'+k).value.trim());const old=byId(edId)||{};if(old.par)e.par=old.par;e.estimada=!!old.estimada;e.cenas=f_cenas.value.split(',').map(s=>+s.trim()).filter(Boolean);e.causa=f_causa.value.split(',').map(s=>s.trim()).filter(Boolean);
+fSalvar.onclick=()=>{const e={};['id','ini','fim','trilha','local','titulo','texto'].forEach(k=>e[k]=$('f_'+k).value.trim());const old=byId(edId)||{};if(old.par)e.par=old.par;if(old.titulo_par)e.titulo_par=old.titulo_par;e.estimada=!!old.estimada;e.cenas=f_cenas.value.split(',').map(s=>+s.trim()).filter(Boolean);e.causa=f_causa.value.split(',').map(s=>s.trim()).filter(Boolean);
  if(!/^\d\d-\d\d$/.test(e.ini)||!/^\d\d-\d\d$/.test(e.fim))return alert('Use datas no formato MM-DD');
  EV=EV.filter(x=>x.id!==edId);EV.push(e);form.style.display='none';save()};
 fExcluir.onclick=()=>{if(edId&&confirm('Excluir evento?')){EV=EV.filter(x=>x.id!==edId);form.style.display='none';save()}};
 bNovo.onclick=()=>edit(null);
 bExp.onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(EV,null,1)],{type:'application/json'}));a.download='linha-do-tempo.json';a.click()};
 imp.onchange=()=>{const f=imp.files[0];if(f)f.text().then(t=>{try{EV=JSON.parse(t);save()}catch(e){alert('JSON inválido')}})};
-bReset.onclick=()=>{if(confirm('Descartar edições e voltar ao original?')){localStorage.removeItem('oqannm_ev_v2');EV=ORIG;save()}};
+bReset.onclick=()=>{if(confirm('Descartar edições e voltar ao original?')){localStorage.removeItem('oqannm_ev_v3');EV=ORIG;save()}};
 for(let y=2020;y<=2035;y++)ano_add(y);function ano_add(y){$('ano').add(new Option(y,y,0,y===ano))}
 $('ano').onchange=e=>{ano=+e.target.value;localStorage.setItem('oqannm_ano',ano);render()};
 save();
+if(AVISO){const a=$('aviso');a.style.display='block';a.innerHTML=`Os dados do site foram atualizados; suas edições locais antigas (${AVISO} eventos) foram guardadas e não estão sendo exibidas. <button id="restAnt">Restaurar minhas edições antigas</button>`;$('restAnt').onclick=()=>{if(confirm('Substituir os dados atualizados pelas suas edições antigas?')){EV=JSON.parse(localStorage.getItem('oqannm_ev_antigo'));save();location.reload()}}}
 </script></body></html>
