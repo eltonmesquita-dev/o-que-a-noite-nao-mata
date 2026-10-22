@@ -110,11 +110,15 @@
   "ini": "05-17",
   "fim": "05-17",
   "trilha": "avo",
-  "local": "Rio de Janeiro",
+  "local": "Alto da Boa Vista, Rio de Janeiro",
   "titulo": "O avô contrata Estêvão",
-  "texto": "O avô viaja ao Rio de Janeiro e contrata Estêvão “Maverick” Torres.",
+  "texto": "Na mansão do Alto da Boa Vista, no Rio de Janeiro, Nestor Chagas Cavalcante, o avô de Laura, recebe Estêvão “Maverick” Torres à noite e o contrata (Cenas 46–49: Estêvão, já matador de aluguel no Rio, recebe por telefone a instrução de ir até a mansão).",
   "causa": [
    "ritual"
+  ],
+  "par": "jack",
+  "cenas": [
+   49
   ]
  },
  {
